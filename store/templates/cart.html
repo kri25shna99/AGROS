@@ -1,0 +1,160 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+{% load cart %}
+{% load custom_filter %}
+<div class="container">
+   <div class="border rounded p-4 m-4">
+        <p class="display-4 pl-4 ml-4">Your Cart</p>
+        <hr>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Sno.</th>
+                    <th>Image</th>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+                {% for product in products %}
+                <tr>
+                    <td>{{forloop.counter}}</td>
+                    <td><img style="height: 80px;" class="rounded-circle" src="{{product.image.url}}" alt=""></td>
+                    <td>{{product.name}}</td>
+                    <td>{{product.price|currency}}</td>
+                    <td>{{product|cart_quantity:request.session.cart}}</td>
+                    <td>{{product|price_total:request.session.cart|currency}}</td>
+                </tr>
+
+                {% endfor %}
+               
+            </tbody>
+
+            <tfoot>
+                <tr>
+                    <th colspan="4"></th>
+                    <th class="" colspan="">Total</th>
+                    <th>{{products|total_cart_price:request.session.cart|currency}}</th>
+                </tr>
+            </tfoot>
+        </table>
+        <hr>
+        <div class="m-3 p-3">
+            <a href="#" data-toggle="modal" data-target="#exampleModal" class="btn btn-secondary border rounded  col-lg-3 float-right">Check out</a>
+        </div>
+   </div>
+</div>
+
+
+<!-- modal -->
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">
+              Check Out Form
+          </h5>
+          <hr>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="m-2 p-3">
+            <form action="/check-out" method="POST">
+                {% csrf_token %}
+                <div class="form-group">
+                  <label for="">Full Name</label>
+                  <input type="text" name="fname" id="" class="form-control" placeholder="Enter your name here" aria-describedby="helpId">
+                </div>
+                <div class="form-group">
+                  <label for="">E-mail</label>
+                  <input type="text" name="email" id="" class="form-control" placeholder="123@example.com" aria-describedby="helpId">
+              </div>
+              <br>
+              <hr>
+              <p><h4><center>Shipping Information</center></h4></p>
+              <hr>
+              
+              <div class="form-group">
+                <label for="">Address</label>
+                <textarea type="text" name="address" id="" class="form-control" placeholder="Enter your address here" aria-describedby="helpId"></textarea>
+            </div>
+            <div class="form-group row">
+              <div class="col-6">
+              <label for="">State</label>
+              <input type="text" name="state" id="" class="form-control" placeholder="State" aria-describedby="helpId">
+              </div>
+              <div class="col-6">
+                <label for="">City</label>
+                <input type="text" name="city" id="" class="form-control" placeholder="City" aria-describedby="helpId">
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <div class="col-6">
+              <label for="">Zip Code</label>
+              <input type="text" name="zipcode" id="" class="form-control" placeholder="Zip Code" aria-describedby="helpId">
+              </div>
+              <div class="col-6">
+                <label for="">Contact</label>
+                <input type="text" name="phone" id="" class="form-control" placeholder="(+91) 8200035903" aria-describedby="helpId">
+              </div>
+            </div>
+                  <input type="submit" class=" btn btn-primary btn-lg btn-block" value="Cash On Delivery">
+                  <br>
+                  <div class="box-element hidden" id="payment-info">
+                    <div id="paypal-button-container"></div>
+                    {% comment %} <button id="make-payment">Make Payment</button> {% endcomment %}
+                  </div>
+            </form>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+
+  <script src="https://www.paypal.com/sdk/js?client-id=AVLodsqfBzYMyW4-BTNTS0_-9tlGWuQCwAuX4PimtmoqzZK_V47vuQe040VpDxL1uIVw-f9jLrkWsJHO&currency=USD"></script>
+
+  <script>
+    let total = '';
+    // Render the PayPal button into #paypal-button-container
+    paypal.Buttons({
+      style: {
+        color: 'black',
+        shape: 'rect',
+      },
+
+      // Set up the transaction
+      createOrder: function(data, actions) {
+        return actions.order.create({
+          purchase_units: [{
+            amount: {
+              value: parseFloat(total).toFixed(2)
+            }
+          }]
+        });
+      },
+
+      // Finalize the transaction
+      onApprove: function(data, actions) {
+        return actions.order.capture().then(function(details) {
+          submitFormData();
+        });
+      }
+
+    }).render('#paypal-button-container');
+  </script>
+
+
+<br><br><br><br><br><br><br><br><br>
+{% endblock %}

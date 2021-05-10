@@ -1,0 +1,109 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<style>
+    body {
+background: url(https://i.ibb.co/Vxh5fsB/signup.jpg) no-repeat 50% 50%;   background-size:cover;
+
+}
+</style>
+
+<div class="container mt-4">
+    
+    <div class="p-4 m-4">
+
+        
+        <div class="col-lg-5 rounded mx-auto border pt-4 bg-white" style="opacity: 0.9;"">
+            <div class="text-center col">
+            
+                <img 
+                src="https://i.ibb.co/2j9zjdW/Agros1-icon.png" alt="agro-image"
+                class="" style="height: 150px;">
+            <!-- <hr> -->
+            <div class="display-8">Sign Up</div>
+            <hr>
+            </div>
+        
+            <form action="/signup" method="POST">
+                
+                {% csrf_token %}
+
+                {% if error%}
+                <div class="alert alert-danger" role="alert">
+                    {{error}}
+                </div>
+                {% endif %}
+                <!-- firstname -->
+                <div class="form-group">
+                    <label for="">First Name</label>
+                    <input type="text" name="firstname"
+                     id="" value="{{values.first_name}}" class="form-control form-control-sm" 
+                     placeholder="">
+                </div>
+
+                <!-- last name -->
+                <div class="form-group">
+                    <label for="">Last Name</label>
+                    <input type="text" name="lastname" 
+                    id="" value="{{values.last_name}}" class="form-control form-control-sm"
+                    >
+                </div>
+
+                <!-- phone -->
+                <div class="form-group">
+                    <label for="">Phone</label>
+                    <input type="text" name="phone" 
+                    id="" class="form-control form-control-sm"
+                    value="{{values.phone}}"
+                    placeholder="1234567891"
+                    >
+                </div>
+                <!-- email -->
+                <div class="form-group">
+                    <label for="">Email</label>
+                    <input required type="email" name="email" id=""
+                    value="{{values.email}}" 
+                    class=" form-control-sm form-control" placeholder="example@gmail.com">
+                </div>
+
+
+                <!-- password -->
+                <div class="form-group">
+                    <label for="">Password</label>
+                    <input type="password" 
+                    name="password" 
+                    id=""
+                     class="form-control form-control-sm" placeholder="********">
+                </div>
+
+                <!-- group -->
+                <div class="form-group">
+                    <label for="">Group</label><br>
+                    <input type="radio" id="farmer" name="group" value="farmer" checked>
+                    <label for="farmer">Farmer</label>
+                    <input type="radio" id="customer" name="group" value="customer">
+                    <label for="customer">Customer</label>
+                </div>
+
+                <!-- Aadhar Card -->
+                <div class="form-group" id = "template_1">
+                    <label for="">Aadhar Card Number</label>
+                    <input type="text" name="aadhar" id="" class="form-control form-control-sm" placeholder="2805********">
+                </div>
+
+                <hr>
+                <div class="form-group">
+                    <input class="btn btn-sm btn-info" type="submit" value="Register">
+                </div>
+
+                
+            </form>
+        </div>
+    </div>
+</div>
+
+<br><br><br>
+
+{% endblock %}

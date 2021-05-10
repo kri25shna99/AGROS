@@ -1,0 +1,100 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+        <meta charset='utf-8'>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+    
+        <link href='https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css' rel='stylesheet'>
+        <link href='' rel='stylesheet'>
+        <style></style>
+        <script type='text/javascript' src=''></script>
+        <script type='text/javascript' src='https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js'></script>
+        <script type='text/javascript'></script>
+   <style>
+       body {
+   background: url(https://images.unsplash.com/photo-1588632205848-5789a592134b?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1000&q=80) no-repeat 50% 50%;   background-size:cover;
+  
+}
+   </style>
+    <div class="mx-auto p-4 h-screen flex justify-center">
+    <div class="flex flex-wrap" style="padding-top: 80px; width: 30%;">
+        <div class="w-full px-2">
+            <div class="bg-gray-900 text-white relative min-w-0 break-words rounded-lg overflow-hidden shadow-sm mb-4 w-full bg-gray-600 dark:bg-gray-600">
+                <div class="px-6 py-6 relative">
+                    <div class="flex mb-4 justify-between items-center">
+                        <div>
+                            <h5 class="mb-0 font-medium text-xl">{{ city }},{{ country }}</h5>
+                            <h6 class="mb-0">{{ month }} {{ date }} ,{{ year }}</h6><small>{{ weather_main }}</small>
+                        </div>
+                        <div class="text-right">
+                            <h3 class="font-bold text-4xl mb-0"><span>{{ temp }} °C</span></h3><small>{{ week_day }}</small>
+                        </div>
+                    </div>
+                    <center>
+                        <div class="w-full sm:w-1/2">
+                            <div class="flex mb-2 justify-between items-center"><span>Latitude</span><small class="px-10 inline-block">{{ latitude }}&nbsp;°</small></div>
+                        </div>
+                        <div class="w-full sm:w-1/2">
+                            <div class="flex mb-2 justify-between items-center"><span>Longitude</span><small class="px-10 inline-block">{{ longitude }}&nbsp;°</small></div>
+                        </div>
+                        <div class="w-full sm:w-1/2">
+                            <div class="flex mb-2 justify-between items-center"><span>Weather</span><small class="px-10 inline-block">{{ weather_description }}</small></div>
+                        </div>
+                        <div class="w-full sm:w-1/2">
+                            <div class="flex mb-2 justify-between items-center"><span>Temp feels like</span><small class="px-10 inline-block">{{ temp_feels_like }}&nbsp;°C</small></div>
+                        </div>
+                        <div class="w-full sm:w-1/2">
+                            <div class="flex mb-2 justify-between items-center"><span>Temp min</span><small class="px-10 inline-block">{{ temp_min }}&nbsp;°C</small></div>
+                        </div>
+                        <div class="w-full sm:w-1/2">
+                            <div class="flex mb-2 justify-between items-center"><span>Temp max</span><small class="px-10 inline-block">{{ temp_max }}&nbsp;°C</small></div>
+                        </div>
+                        <div class="w-full sm:w-1/2">
+                            <div class="flex mb-2 justify-between items-center"><span>Pressure</span><small class="px-10 inline-block">{{ pressure }}&nbsp;hPa</small></div>
+                        </div>
+                        <div class="w-full sm:w-1/2">
+                            <div class="flex mb-2 justify-between items-center"><span>Humidity</span><small class="px-10 inline-block">{{ humidity }}&nbsp;%</small></div>
+                        </div>
+                        <div class="w-full sm:w-1/2">
+                            <div class="flex mb-2 justify-between items-center"><span>Visibility</span><small class="px-10 inline-block">{{ visibility }}&nbsp;</small></div>
+                        </div>
+                        <div class="w-full sm:w-1/2">
+                            <div class="flex mb-2 justify-between items-center"><span>Wind speed</span><small class="px-10 inline-block">{{ wind_speed }}&nbsp;km/h</small></div>
+                        </div>
+                        <div class="w-full sm:w-1/2">
+                            <div class="flex mb-2 justify-between items-center"><span>Wind deg</span><small class="px-10 inline-block">{{ dire }}&nbsp;</small></div>
+                        </div>
+                        <div class="w-full sm:w-1/2">
+                            <div class="flex mb-2 justify-between items-center"><span>Clouds</span><small class="px-10 inline-block">{{ clouds }}&nbsp;</small></div>
+                        </div>
+                        <div class="w-full sm:w-1/2">
+                            <div class="flex mb-2 justify-between items-center"><span>Sunrise</span><small class="px-10 inline-block">{{ sunrise }}&nbsp;</small></div>
+                        </div>
+                        <div class="w-full sm:w-1/2">
+                            <div class="flex mb-2 justify-between items-center"><span>Sunset</span><small class="px-10 inline-block">{{ sunset }}&nbsp;</small></div>
+                        </div>
+                    </center>
+                </div><br>
+                <div class="divider table mx-2 text-center bg-transparent text-white whitespace-nowrap"><span class="inline-block px-3"><h5>Weather Forecast</h5></span></div>
+                <div class="px-6 py-6 relative">
+                    <div class="text-center justify-between items-center flex" style="flex-flow: initial;">
+                        <div class="text-center mb-0 flex items-center justify-center flex-col"><span class="block my-1">{{ weekdays_1 }}</span><img src="https://i.imgur.com/ffgW9JQ.png" class="block w-8 h-8"><span class="block my-1">{{ day_1 }}°C</span></div>
+                        <div class="text-center mb-0 flex items-center justify-center flex-col"><span class="block my-1">{{ weekdays_2 }}</span><img src="https://i.imgur.com/BQbzoKt.png" class="block w-8 h-8"><span class="block my-1">{{ day_2 }}°C</span></div>
+                        <div class="text-center mb-0 flex items-center justify-center flex-col"><span class="block my-1">{{ weekdays_3 }}</span><img src="https://i.imgur.com/BQbzoKt.png" class="block w-8 h-8"><span class="block my-1">{{ day_3 }}°C</span></div>
+                        <div class="text-center mb-0 flex items-center justify-center flex-col"><span class="block my-1">{{ weekdays_4 }}</span><img src="https://i.imgur.com/ffgW9JQ.png" class="block w-8 h-8"><span class="block my-1">{{ day_4 }}°C</span></div>
+                        <div class="text-center mb-0 flex items-center justify-center flex-col"><span class="block my-1">{{ weekdays_5 }}</span><img src="https://i.imgur.com/ffgW9JQ.png" class="block w-8 h-8"><span class="block my-1">{{ day_5 }}°C</span></div>
+                        <div class="text-center mb-0 flex items-center justify-center flex-col"><span class="block my-1">{{ weekdays_6 }}</span><img src="https://i.imgur.com/BQbzoKt.png" class="block w-8 h-8"><span class="block my-1">{{ day_6 }}°C</span></div>
+                        <!--<div class="text-center mb-0 flex items-center justify-center flex-col"><span class="block my-1">Sat</span><img src="https://i.imgur.com/BQbzoKt.png" class="block w-8 h-8"><span class="block my-1">{{ saturday }}°C</span></div>-->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div style="padding-left: 6%;"><a class="btn1" href="/weatherdatas"><span style="color: #fff; border-radius: 20px;font-size: 18px;"><center><b></b></center></span></a></div>
+<br><br><br>
+{% endblock %}

@@ -1,0 +1,476 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+
+  <!--<link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'><link rel="stylesheet" href="./style.css">-->
+<style>
+  #header {
+  background: url(https://miro.medium.com/max/2458/1*FswlF4lZPQ4kT_gkybacZw.jpeg) center center / cover no-repeat;
+  /*background-size: 1500px 800px;*/
+  
+  height: 425px;
+}
+
+</style>
+
+
+
+
+<!-- partial:index.partial.html -->
+
+<section id="header" class="jumbotron text-center">
+  <h1 class="display-2" style="color:white">Agro Services and Solutions</h1>
+  <p class="lead" style="color:white">Get the solution of predicted plant leaf disease.</p>
+  <!--<a href="" class="btn btn-primary">Click</a>
+  <a href="" class="btn btn-secondary">Click</a>-->
+</section><br>
+
+<center><input type="text" id="myinput" placeholder="&#128269 Search for a disease..." size="80"></center><br><br>
+
+<section id="gallery">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 mb-4 mydisease">
+        <div class="card">
+          <img src="https://i.ibb.co/Mfh0hwx/Apple-Apple-scab.jpg">
+          <div class="card-body">
+            <h5 class="card-title">Apple Apple scab</h5>
+            <p class="card-text"></p>
+            <a href="https://www.google.com/search?q=remedies+for+apple+apple+scab+plant+disease&rlz=1C5CHFA_enIN839IN839&sxsrf=ALeKk035Ww1FdFdm5Ym3clmre-mF4_f5nA%3A1617554726823&ei=Ju1pYJrYMaqQ4-EPtryv6A8&oq=remedies+for+Apple+Apple+scab+plant+&gs_lcp=Cgdnd3Mtd2l6EAEYADIFCCEQoAEyBQghEKABOgcIABBHELADOgcIIxCuAhAnOggIIRAWEB0QHlCLJlj5M2DoP2gBcAJ4AIABtAGIAZoJkgEDMC44mAEAoAEBqgEHZ3dzLXdpesgBCMABAQ&sclient=gws-wiz" class="btn btn-outline-success btn-sm">Google Search</a>
+            <a href="https://www.youtube.com/results?search_query=remedies+for+apple+apple+scab+plant+disease" class="btn btn-outline-danger btn-sm">Youtube Video</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4  mydisease">
+        <div class="card">
+          <img src="https://i.ibb.co/4SJZgsc/Apple-Black-rot.jpg">
+          <div class="card-body">
+            <h5 class="card-title">Apple Black rot</h5>
+            <p class="card-text"></p>
+            <a href="https://www.google.com/search?q=remedies+for+Apple+Black+rot+plant+disease&rlz=1C5CHFA_enIN839IN839&sxsrf=ALeKk01jjYsYcQr81U7_MiH0wKw5lDJ8mg%3A1617554736235&ei=MO1pYPTdDaSV4-EPtpyceA&oq=remedies+for+Apple+Black+rot+plant+disease&gs_lcp=Cgdnd3Mtd2l6EAM6BwgAEEcQsAM6BAgAEB46BggAEAUQHlDWkB5YoJQeYL2hHmgDcAJ4AIABmgGIAaUDkgEDMC4zmAEAoAEBoAECqgEHZ3dzLXdpesgBCMABAQ&sclient=gws-wiz&ved=0ahUKEwj0tdT7hOXvAhWkyjgGHTYOBw8Q4dUDCA0&uact=5" class="btn btn-outline-success btn-sm">Google Search</a>
+            <a href="https://www.youtube.com/results?search_query=remedies+for+Apple+Black+rot+plant+disease" class="btn btn-outline-danger btn-sm">Youtube Video</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4  mydisease">
+        <div class="card">
+          <img src="https://i.ibb.co/Fmq0nfb/Apple-Cedar-apple-rust.jpg">
+          <div class="card-body">
+            <h5 class="card-title">Apple Cedar apple rust</h5>
+            <p class="card-text"></p>
+            <a href="https://www.google.com/search?q=remedies+for+Apple+Cedar+apple+rust+plant+disease&rlz=1C5CHFA_enIN839IN839&sxsrf=ALeKk00SP28Sj61dncYkq8_RlKzrShTu3Q%3A1617555311334&ei=b-9pYInqE9CY4-EP3c-HaA&oq=remedies+for+Apple+Cedar+apple+rust+plant+disease&gs_lcp=Cgdnd3Mtd2l6EAMyBAgjECc6BwgjELADECc6BwgAEEcQsAM6BAgAEB46BggAEAUQHlC4sAZY6rUGYMnJBmgDcAJ4AIABrQKIAcsEkgEHMC4yLjAuMZgBAKABAaABAqoBB2d3cy13aXrIAQnAAQE&sclient=gws-wiz&ved=0ahUKEwjJ3fGNh-XvAhVQzDgGHd3nAQ0Q4dUDCA0&uact=5" class="btn btn-outline-success btn-sm">Google Search</a>
+            <a href="https://www.youtube.com/results?search_query=remedies+for+Apple+Cedar+apple+rust+plant+disease" class="btn btn-outline-danger btn-sm">Youtube Video</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4  mydisease">
+        <div class="card">
+          <img src="https://i.ibb.co/ZSWjXSX/Apple-healthy.jpg">
+          <div class="card-body">
+            <h5 class="card-title">Apple healthy</h5>
+            <p class="card-text"></p>
+            <a href="https://www.google.com/search?q=remedies+for+Apple+healthy+plant+disease&rlz=1C5CHFA_enIN839IN839&sxsrf=ALeKk00SP28Sj61dncYkq8_RlKzrShTu3Q%3A1617555311334&ei=b-9pYInqE9CY4-EP3c-HaA&oq=remedies+for+Apple+healthy+plant+disease&gs_lcp=Cgdnd3Mtd2l6EAM6BwgjELADECc6BwgAEEcQsAM6BAgAEB46BggAEAUQHlCo9QVY1oEGYIqHBmgCcAJ4AIABrwGIAbMEkgEDMC40mAEAoAEBoAECqgEHZ3dzLXdpesgBCcABAQ&sclient=gws-wiz&ved=0ahUKEwjJ3fGNh-XvAhVQzDgGHd3nAQ0Q4dUDCA0&uact=5" class="btn btn-outline-success btn-sm">Google Search</a>
+            <a href="https://www.youtube.com/results?search_query=remedies+for+Apple+healthy+plant+disease" class="btn btn-outline-danger btn-sm">Youtube Video</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4  mydisease">
+        <div class="card">
+          <img src="https://i.ibb.co/0XFXsPM/Blueberry-healthy.jpg">
+          <div class="card-body">
+            <h5 class="card-title">Blueberry healthy</h5>
+            <p class="card-text"></p>
+            <a href="https://www.google.com/search?q=remedies+for+Blueberry+healthy+plant+disease&rlz=1C5CHFA_enIN839IN839&sxsrf=ALeKk02jre1BF6G9__KMCU9l3MrkGjixxQ%3A1617555519781&ei=P_BpYICEL4qR4-EPz96SkAg&oq=remedies+for+Blueberry+healthy+plant+disease&gs_lcp=Cgdnd3Mtd2l6EAM6BwgAEEcQsAM6BAgAEB46BggAEAUQHlDY7ARY7e8EYI_3BGgBcAJ4AIABjAGIAZQDkgEDMC4zmAEAoAEBoAECqgEHZ3dzLXdpesgBCMABAQ&sclient=gws-wiz&ved=0ahUKEwjAn6Txh-XvAhWKyDgGHU-vBIIQ4dUDCA0&uact=5" class="btn btn-outline-success btn-sm">Google Search</a>
+            <a href="https://www.youtube.com/results?search_query=remedies+for+Blueberry+healthy+plant+disease" class="btn btn-outline-danger btn-sm">Youtube Video</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4  mydisease">
+        <div class="card">
+          <img src="https://i.ibb.co/v3KR1Hr/Cherry-including-sour-healthy.jpg">
+          <div class="card-body">
+            <h5 class="card-title">Cherry(including sour) healthy</h5>
+            <p class="card-text"></p>
+            <a href="https://www.google.com/search?q=remedies+for+Cherry%28including+sour%29+healthy+plant+disease&rlz=1C5CHFA_enIN839IN839&sxsrf=ALeKk01MGwy6i-DphY7pHz912xiwadA-qQ%3A1617555601594&ei=kfBpYIvhI86b4-EPi4mrkAg&oq=remedies+for+Cherry%28including+sour%29+healthy+plant+disease&gs_lcp=Cgdnd3Mtd2l6EAM6BwgAEEcQsAM6BAgAEB46BggAEAUQHlDA0QRYuNQEYN3dBGgBcAJ4AIAB5AGIAfADkgEFMC4yLjGYAQCgAQGgAQKqAQdnd3Mtd2l6yAEIwAEB&sclient=gws-wiz&ved=0ahUKEwjL7aWYiOXvAhXOzTgGHYvECoIQ4dUDCA0&uact=5" class="btn btn-outline-success btn-sm">Google Search</a>
+            <a href="https://www.youtube.com/results?search_query=remedies+for+Cherry(including+sour)+healthy+plant+disease" class="btn btn-outline-danger btn-sm">Youtube Video</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4  mydisease">
+        <div class="card">
+          <img src="https://i.ibb.co/PwfnkMR/Cherry-including-sour-Powdery-mildew.jpg">
+          <div class="card-body">
+            <h5 class="card-title">Cherry(including sour) Powdery mildew</h5>
+            <p class="card-text"></p>
+            <a href="https://www.google.com/search?q=remedies+for+Cherry%28including+sour%29+healthy+plant+disease&rlz=1C5CHFA_enIN839IN839&sxsrf=ALeKk00cBNfMBB0brBrrVnKVIrc0MOYWtw%3A1617555680316&ei=4PBpYMvvEpub4-EPg4WskAI&oq=remedies+for+Cherry%28including+sour%29+healthy+plant+disease&gs_lcp=Cgdnd3Mtd2l6EAMyBAgjECc6BwgAEEcQsAM6BAgAEB46BggAEAUQHlCp1ghYs_EIYJ_4CGgCcAJ4AIABnAGIAaYEkgEDMC40mAEAoAEBoAECqgEHZ3dzLXdpesgBCMABAQ&sclient=gws-wiz&ved=0ahUKEwjL3-q9iOXvAhWbzTgGHYMCCyIQ4dUDCA0&uact=5" class="btn btn-outline-success btn-sm">Google Search</a>
+            <a href="https://www.youtube.com/results?search_query=remedies+for+Cherry(including+sour)+healthy+plant+disease" class="btn btn-outline-danger btn-sm">Youtube Video</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4  mydisease">
+        <div class="card">
+          <img src="https://i.ibb.co/HFr176d/Corn-maize-Cercospora-leaf-spot-Gray-leaf-spot.jpg">
+          <div class="card-body">
+            <h5 class="card-title">Corn(maize) Cercospora leaf spot Gray leaf spot</h5>
+            <p class="card-text"></p>
+            <a href="https://www.google.com/search?q=remedies+for+Corn%28maize%29+Cercospora+leaf+spot+Gray+leaf+spot&rlz=1C5CHFA_enIN839IN839&sxsrf=ALeKk03svXT7oooIoQLz9y4xt55SRfB1KQ%3A1617616002992&ei=gtxqYPbdO5qz9QPD8YdA&oq=remedies+for+Corn%28maize%29+Cercospora+leaf+spot+Gray+leaf+spot&gs_lcp=Cgdnd3Mtd2l6EAMyBggAEBYQHjoHCAAQRxCwAzoECCMQJzoCCAA6CAgAELEDEIMBOgUIABCxA1DDIViTY2Cna2gBcAJ4AoABnQaIAaIkkgEKMC4xOS4zLjYtMZgBAKABAaABAqoBB2d3cy13aXrIAQjAAQE&sclient=gws-wiz&ved=0ahUKEwj2pvaZ6ebvAhWaWX0KHcP4AQgQ4dUDCA0&uact=5" class="btn btn-outline-success btn-sm">Google Search</a>
+            <a href="https://www.youtube.com/results?search_query=remedies+for+Corn(maize)+Cercospora+leaf+spot+Gray+leaf+spot" class="btn btn-outline-danger btn-sm">Youtube Video</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4  mydisease">
+        <div class="card">
+          <img src="https://i.ibb.co/9t13CpZ/Corn-maize-Common-rust.jpg">
+          <div class="card-body">
+            <h5 class="card-title">Corn(maize) Common rust</h5>
+            <p class="card-text"></p>
+            <a href="https://www.google.com/search?q=remedies+for+Corn%28maize%29+Common+rust+plant+disease&rlz=1C5CHFA_enIN839IN839&sxsrf=ALeKk00cBNfMBB0brBrrVnKVIrc0MOYWtw%3A1617555680316&ei=4PBpYMvvEpub4-EPg4WskAI&oq=remedies+for+Corn%28maize%29+Common+rust+plant+disease&gs_lcp=Cgdnd3Mtd2l6EAM6BwgjELADECc6BwgAEEcQsAM6BAgAEB46BggAEAUQHlDj5ARY7OcEYMvtBGgCcAJ4AIABjAKIAYMEkgEFMC4yLjGYAQCgAQGgAQKqAQdnd3Mtd2l6yAEJwAEB&sclient=gws-wiz&ved=0ahUKEwjL3-q9iOXvAhWbzTgGHYMCCyIQ4dUDCA0&uact=5" class="btn btn-outline-success btn-sm">Google Search</a>
+            <a href="https://www.youtube.com/results?search_query=remedies+for+Corn(maize)+Common+rust+plant+disease" class="btn btn-outline-danger btn-sm">Youtube Video</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4  mydisease">
+        <div class="card">
+          <img src="https://i.ibb.co/0jRsNRr/Corn-maize-healthy.jpg">
+          <div class="card-body">
+            <h5 class="card-title">Corn(maize) healthy</h5>
+            <p class="card-text"></p>
+            <a href="https://www.google.com/search?q=remedies+for+Corn%28maize%29+healthy+plant+disease&rlz=1C5CHFA_enIN839IN839&sxsrf=ALeKk03EBP4KZiVKRCLKlPbZWFbJISRNQw%3A1617555907990&ei=w_FpYO30O5ye4-EPzr2TWA&oq=remedies+for+Corn%28maize%29+healthy+plant+disease&gs_lcp=Cgdnd3Mtd2l6EAM6BwgAEEcQsAM6BAgAEB46BggAEAUQHlDU4gRYwuUEYP_qBGgBcAJ4AIABkAGIAZoDkgEDMC4zmAEAoAEBoAECqgEHZ3dzLXdpesgBCMABAQ&sclient=gws-wiz&ved=0ahUKEwit4rKqieXvAhUczzgGHc7eBAsQ4dUDCA0&uact=5" class="btn btn-outline-success btn-sm">Google Search</a>
+            <a href="https://www.youtube.com/results?search_query=remedies+for+Corn(maize)+healthy+plant+disease" class="btn btn-outline-danger btn-sm">Youtube Video</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4  mydisease">
+        <div class="card">
+          <img src="https://i.ibb.co/s5RFfnB/Corn-maize-Northern-Leaf-Blight.jpg">
+          <div class="card-body">
+            <h5 class="card-title">Corn(maize) Northern Leaf Blight</h5>
+            <p class="card-text"></p>
+            <a href="https://www.google.com/search?q=remedies+for+Corn%28maize%29+Northern+Leaf+Blight+plant+disease&rlz=1C5CHFA_enIN839IN839&sxsrf=ALeKk03TbXmzTs5YqlYzlPpTElZ8g-vz1A%3A1617555988164&ei=FPJpYLzDCd-E4-EP1pG4gAM&oq=remedies+for+Corn%28maize%29+Northern+Leaf+Blight+plant+disease&gs_lcp=Cgdnd3Mtd2l6EAMyBQgAEM0CMgUIABDNAjIFCAAQzQIyBQgAEM0COgcIABBHELADOgQIABAeOgYIABAFEB5Q2o4EWMSXBGCunARoAXACeACAAe0BiAGTBZIBBTAuMy4xmAEAoAEBoAECqgEHZ3dzLXdpesgBCMABAQ&sclient=gws-wiz&ved=0ahUKEwi8ndDQieXvAhVfwjgGHdYIDjAQ4dUDCA0&uact=5" class="btn btn-outline-success btn-sm">Google Search</a>
+            <a href="https://www.youtube.com/results?search_query=remedies+for+Corn(maize)+Northern+Leaf+Blight+plant+disease" class="btn btn-outline-danger btn-sm">Youtube Video</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4  mydisease">
+        <div class="card">
+          <img src="https://i.ibb.co/WHdyPzK/Grape-Black-rot.jpg">
+          <div class="card-body">
+            <h5 class="card-title">Grape Black rot</h5>
+            <p class="card-text"></p>
+            <a href="https://www.google.com/search?q=remedies+for+Grape+Black+rot+plant+disease&rlz=1C5CHFA_enIN839IN839&sxsrf=ALeKk03ZAhyH_BEEWaOZ0ABmg-zCsNUBfQ%3A1617556058467&ei=WvJpYJn8G6OV4-EP3MuKyAU&oq=remedies+for+Grape+Black+rot+plant+disease&gs_lcp=Cgdnd3Mtd2l6EAM6BwgAEEcQsAM6BAgAEB46BggAEAUQHlDfiAZY6IsGYOSRBmgCcAJ4AIABuwGIAcMDkgEDMC4zmAEAoAEBoAECqgEHZ3dzLXdpesgBCMABAQ&sclient=gws-wiz&ved=0ahUKEwiZkZPyieXvAhWjyjgGHdylAlkQ4dUDCA0&uact=5" class="btn btn-outline-success btn-sm">Google Search</a>
+            <a href="https://www.youtube.com/results?search_query=remedies+for+Grape+Black+rot+plant+disease" class="btn btn-outline-danger btn-sm">Youtube Video</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4  mydisease">
+        <div class="card">
+          <img src="https://i.ibb.co/BjCqyNh/Grape-healthy.jpg">
+          <div class="card-body">
+            <h5 class="card-title">Grape healthy</h5>
+            <p class="card-text"></p>
+            <a href="https://www.google.com/search?q=remedies+for+Grape+healthy&rlz=1C5CHFA_enIN839IN839&sxsrf=ALeKk00FH5Xj-84O988TBo-b4LvmcO3SVw%3A1617616020444&ei=lNxqYOfTGsnprQGp8oagDA&oq=remedies+for+Grape+healthy&gs_lcp=Cgdnd3Mtd2l6EAMyBQghEKABMgUIIRCgAToHCAAQRxCwAzoECCMQJzoGCAAQFhAeOggIABCxAxCDAToFCAAQsQM6AggAULOPBliHpgZgoKsGaAFwAngAgAGQAogB0guSAQUwLjguMZgBAKABAaABAqoBB2d3cy13aXrIAQjAAQE&sclient=gws-wiz&ved=0ahUKEwjn7Z-i6ebvAhXJdCsKHSm5AcQQ4dUDCA0&uact=5" class="btn btn-outline-success btn-sm">Google Search</a>
+            <a href="https://www.youtube.com/results?search_query=remedies+for+Grape+healthy" class="btn btn-outline-danger btn-sm">Youtube Video</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4  mydisease">
+        <div class="card">
+          <img src="https://i.ibb.co/YZ2vZRj/Grape-Esca-Black-Measles.jpg">
+          <div class="card-body">
+            <h5 class="card-title">Grape Esca(Black Measles)</h5>
+            <p class="card-text"></p>
+            <a href="https://www.google.com/search?q=remedies+for+Grape+Esca%28Black+Measles%29+plant+disease&rlz=1C5CHFA_enIN839IN839&sxsrf=ALeKk01I6DLxe2G9Lt2Yu5gcAclj9s4UBg%3A1617556160038&ei=wPJpYIjwAfSD4-EP2viiqA8&oq=remedies+for+Grape+Esca%28Black+Measles%29+plant+disease&gs_lcp=Cgdnd3Mtd2l6EAM6BwgAEEcQsAM6BAgAEB46BggAEAUQHlDj8wVY1PgFYNX8BWgCcAJ4AIAB6QGIAaoFkgEFMC4zLjGYAQCgAQGgAQKqAQdnd3Mtd2l6yAEIwAEB&sclient=gws-wiz&ved=0ahUKEwiI0MqiiuXvAhX0wTgGHVq8CPUQ4dUDCA0&uact=5" class="btn btn-outline-success btn-sm">Google Search</a>
+            <a href="https://www.youtube.com/results?search_query=remedies+for+Grape+Esca(Black+Measles)+plant+disease" class="btn btn-outline-danger btn-sm">Youtube Video</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4  mydisease">
+        <div class="card">
+          <img src="https://i.ibb.co/RCYnrHZ/Grape-Leaf-blight-Isariopsis-Leaf-Spot.jpg">
+          <div class="card-body">
+            <h5 class="card-title">Grape Leaf blight(Isariopsis Leaf Spot)</h5>
+            <p class="card-text"></p>
+            <a href="https://www.google.com/search?q=remedies+for+Grape+Leaf+blight%28Isariopsis+Leaf+Spot%29+plant+disease&rlz=1C5CHFA_enIN839IN839&sxsrf=ALeKk03eLdD22KHmxdE3rnOyGST5J98h0Q%3A1617556258903&ei=IvNpYL7RNrG-3LUPpquQwA4&oq=remedies+for+Grape+Leaf+blight%28Isariopsis+Leaf+Spot%29+plant+disease&gs_lcp=Cgdnd3Mtd2l6EAM6BwgAEEcQsAM6BAgAEB46BggAEAUQHlCm4gNY7-gDYMfxA2gBcAJ4AIABqQGIAcEDkgEDMC4zmAEAoAEBoAECqgEHZ3dzLXdpesgBCMABAQ&sclient=gws-wiz&ved=0ahUKEwi-6tzRiuXvAhUxH7cAHaYVBOgQ4dUDCA0&uact=5" class="btn btn-outline-success btn-sm">Google Search</a>
+            <a href="https://www.youtube.com/results?search_query=remedies+for+Grape+Leaf+blight(Isariopsis+Leaf+Spot)+plant+disease" class="btn btn-outline-danger btn-sm">Youtube Video</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4  mydisease">
+        <div class="card">
+          <img src="https://i.ibb.co/5cStF7Y/Orange-Haunglongbing-Citrus-greening.jpg">
+          <div class="card-body">
+            <h5 class="card-title">Orange Haunglongbing(Citrus greening)</h5>
+            <p class="card-text"></p>
+            <a href="https://www.google.com/search?q=remedies+for+Orange+Haunglongbing%28Citrus+greening%29+plant+disease&rlz=1C5CHFA_enIN839IN839&sxsrf=ALeKk03IlYk2blMuXv45X9ghSNmNZzciGQ%3A1617556323610&ei=Y_NpYKLQJIPez7sPvpOzoA0&oq=remedies+for+Orange+Haunglongbing%28Citrus+greening%29+plant+disease&gs_lcp=Cgdnd3Mtd2l6EAM6BwgAEEcQsAM6BAgAEB46BggAEAUQHlCcuARYr74EYMbBBGgBcAJ4AIAB5QGIAYEEkgEFMC4yLjGYAQCgAQGgAQKqAQdnd3Mtd2l6yAEIwAEB&sclient=gws-wiz&ved=0ahUKEwjijcrwiuXvAhUD73MBHb7JDNQQ4dUDCA0&uact=5" class="btn btn-outline-success btn-sm">Google Search</a>
+            <a href="https://www.youtube.com/results?search_query=remedies+for+Orange+Haunglongbing(Citrus+greening)+plant+disease" class="btn btn-outline-danger btn-sm">Youtube Video</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4  mydisease">
+        <div class="card">
+          <img src="https://i.ibb.co/F58NSMN/Peach-Bacterial-spot.jpg">
+          <div class="card-body">
+            <h5 class="card-title">Peach Bacterial spot</h5>
+            <p class="card-text"></p>
+            <a href="https://www.google.com/search?q=remedies+for+Peach+Bacterial+spot+plant+disease&rlz=1C5CHFA_enIN839IN839&sxsrf=ALeKk02YaLjL8DS8DSRw6VVH4jkJTJ11Wg%3A1617556398887&ei=rvNpYIC9NeTB3LUPzte6uA0&oq=remedies+for+Peach+Bacterial+spot+plant+disease&gs_lcp=Cgdnd3Mtd2l6EAM6BwgAEEcQsAM6BAgAEB46BggAEAUQHlDouANY1ckDYJzQA2gBcAJ4AIABhwKIAbcGkgEFMC40LjGYAQCgAQGgAQKqAQdnd3Mtd2l6yAEIwAEB&sclient=gws-wiz&ved=0ahUKEwiAzLyUi-XvAhXkILcAHc6rDtcQ4dUDCA0&uact=5" class="btn btn-outline-success btn-sm">Google Search</a>
+            <a href="https://www.youtube.com/results?search_query=remedies+for+Peach+Bacterial+spot+plant+disease" class="btn btn-outline-danger btn-sm">Youtube Video</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4  mydisease">
+        <div class="card">
+          <img src="https://i.ibb.co/fY8x1WW/Peach-healthy.jpg">
+          <div class="card-body">
+            <h5 class="card-title">Peach healthy</h5>
+            <p class="card-text"></p>
+            <a href="https://www.google.com/search?q=remedies+for+Peach+healthy+plant+disease&rlz=1C5CHFA_enIN839IN839&sxsrf=ALeKk00BGXHV6q0BmfghcpWL9VaiJnTyig%3A1617556459259&ei=6_NpYPykD9bA3LUPy7asqAw&oq=remedies+for+Peach+healthy+plant+disease&gs_lcp=Cgdnd3Mtd2l6EAM6BwgAEEcQsAM6BAgAEB46BggAEAUQHlDY1wRY7doEYMzeBGgCcAJ4AIABsQGIAdQDkgEDMC4zmAEAoAEBoAECqgEHZ3dzLXdpesgBCMABAQ&sclient=gws-wiz&ved=0ahUKEwi8xqGxi-XvAhVWILcAHUsbC8UQ4dUDCA0&uact=5" class="btn btn-outline-success btn-sm">Google Search</a>
+            <a href="https://www.youtube.com/results?search_query=remedies+for+Peach+healthy+plant+disease" class="btn btn-outline-danger btn-sm">Youtube Video</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4  mydisease">
+        <div class="card">
+          <img src="https://i.ibb.co/VSPXS5s/Pepper-bell-Bacterial-spot.jpg">
+          <div class="card-body">
+            <h5 class="card-title">Pepper bell Bacterial spot</h5>
+            <p class="card-text"></p>
+            <a href="https://www.google.com/search?q=remedies+for+Pepper+bell+Bacterial+spot+plant+disease&rlz=1C5CHFA_enIN839IN839&sxsrf=ALeKk00D1W9Lj3js-I07C2VEnX56PuKtAw%3A1617556538019&ei=OvRpYMFmyJ7j4Q-_lK2gCw&oq=remedies+for+Pepper+bell+Bacterial+spot+plant+disease&gs_lcp=Cgdnd3Mtd2l6EAM6BwgAEEcQsAM6BAgAEB46BggAEAUQHlDLlwRY_poEYLetBGgCcAJ4AIABlQGIAZ0DkgEDMC4zmAEAoAEBoAECqgEHZ3dzLXdpesgBCMABAQ&sclient=gws-wiz&ved=0ahUKEwjB6-jWi-XvAhVIzzgGHT9KC7QQ4dUDCA0&uact=5" class="btn btn-outline-success btn-sm">Google Search</a>
+            <a href="https://www.youtube.com/results?search_query=remedies+for+Pepper+bell+Bacterial+spot+plant+disease" class="btn btn-outline-danger btn-sm">Youtube Video</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4  mydisease">
+        <div class="card">
+          <img src="https://i.ibb.co/Bcpqsb5/Pepper-bell-healthy.jpg">
+          <div class="card-body">
+            <h5 class="card-title">Pepper bell healthy</h5>
+            <p class="card-text"></p>
+            <a href="https://www.google.com/search?q=remedies+for+Pepper+bell+healthy+plant+disease&rlz=1C5CHFA_enIN839IN839&sxsrf=ALeKk004pw83R9jerLm6xdQC4PD136Rhng%3A1617556610427&ei=gvRpYILTGc2R4-EP4c2o-Ac&oq=remedies+for+Pepper+bell+healthy+plant+disease&gs_lcp=Cgdnd3Mtd2l6EAM6BwgAEEcQsAM6BAgAEB46BggAEAUQHlCo6gRYwe8EYLbyBGgCcAJ4AIABmwKIAbwEkgEFMC4yLjGYAQCgAQGgAQKqAQdnd3Mtd2l6yAEIwAEB&sclient=gws-wiz&ved=0ahUKEwiCnKz5i-XvAhXNyDgGHeEmCn8Q4dUDCA0&uact=5" class="btn btn-outline-success btn-sm">Google Search</a>
+            <a href="https://www.youtube.com/results?search_query=remedies+for+Pepper+bell+healthy+plant+disease" class="btn btn-outline-danger btn-sm">Youtube Video</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4  mydisease">
+        <div class="card">
+          <img src="https://i.ibb.co/SyHnYrC/Potato-Early-blight.jpg">
+          <div class="card-body">
+            <h5 class="card-title">Potato Early blight</h5>
+            <p class="card-text"></p>
+            <a href="https://www.google.com/search?q=remedies+for+Potato+Early+blight+plant+disease&rlz=1C5CHFA_enIN839IN839&sxsrf=ALeKk01kNqzp0dPfGUsRNLYtfDUy8hagGA%3A1617556691578&ei=0_RpYL7kIoKc4-EPi7GQuAs&oq=remedies+for+Potato+Early+blight+plant+disease&gs_lcp=Cgdnd3Mtd2l6EAM6BwgAEEcQsAM6BAgAEB46BggAEAUQHlCUiANYu4sDYKuOA2gBcAJ4AIAB6QGIAYMEkgEFMC4yLjGYAQCgAQGgAQKqAQdnd3Mtd2l6yAEIwAEB&sclient=gws-wiz&ved=0ahUKEwj-mYWgjOXvAhUCzjgGHYsYBLcQ4dUDCA0&uact=5" class="btn btn-outline-success btn-sm">Google Search</a>
+            <a href="https://www.youtube.com/results?search_query=remedies+for+Potato+Early+blight+plant+disease" class="btn btn-outline-danger btn-sm">Youtube Video</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4  mydisease">
+        <div class="card">
+          <img src="https://i.ibb.co/JnW4Dcz/Potato-healthy.jpg">
+          <div class="card-body">
+            <h5 class="card-title">Potato healthy</h5>
+            <p class="card-text"></p>
+            <a href="https://www.google.com/search?q=remedies+for+Potato+healthy+plant+disease&rlz=1C5CHFA_enIN839IN839&sxsrf=ALeKk02gy6wcYYgylCWnvpbk0vbOPl9Jaw%3A1617556743730&ei=B_VpYLyELJWI4-EPsaqwqAQ&oq=remedies+for+Potato+healthy+plant+disease&gs_lcp=Cgdnd3Mtd2l6EAM6BwgAEEcQsAM6BAgAEB46BggAEAUQHlDnqgNY3K0DYOOzA2gBcAJ4AIABjwKIAY8EkgEFMC4yLjGYAQCgAQGgAQKqAQdnd3Mtd2l6yAEIwAEB&sclient=gws-wiz&ved=0ahUKEwj8o_S4jOXvAhUVxDgGHTEVDEUQ4dUDCA0&uact=5" class="btn btn-outline-success btn-sm">Google Search</a>
+            <a href="https://www.youtube.com/results?search_query=remedies+for+Potato+healthy+plant+disease" class="btn btn-outline-danger btn-sm">Youtube Video</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4  mydisease">
+        <div class="card">
+          <img src="https://i.ibb.co/6Xp8HGV/Potato-Late-blight.jpg">
+          <div class="card-body">
+            <h5 class="card-title">Potato Late blight</h5>
+            <p class="card-text"></p>
+            <a href="https://www.google.com/search?q=remedies+for+Potato+Late+blight+plant+disease&rlz=1C5CHFA_enIN839IN839&sxsrf=ALeKk00iYMI9By8ifS-rFqktrcaPq6iFmQ%3A1617556800590&ei=QPVpYM7LI8-b4-EP96W9sAQ&oq=remedies+for+Potato+Late+blight+plant+disease&gs_lcp=Cgdnd3Mtd2l6EAMyBQgAEM0CMgUIABDNAjIFCAAQzQI6BwgAEEcQsAM6BAgAEB46BggAEAUQHlCXygRYgs0EYNfQBGgBcAJ4AIABgQKIAZIEkgEFMC4yLjGYAQCgAQGgAQKqAQdnd3Mtd2l6yAEIwAEB&sclient=gws-wiz&ved=0ahUKEwjO64LUjOXvAhXPzTgGHfdSD0YQ4dUDCA0&uact=5" class="btn btn-outline-success btn-sm">Google Search</a>
+            <a href="https://www.youtube.com/results?search_query=remedies+for+Potato+Late+blight+plant+disease" class="btn btn-outline-danger btn-sm">Youtube Video</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4  mydisease">
+        <div class="card">
+          <img src="https://i.ibb.co/hZnBszd/Raspberry-healthy.jpg">
+          <div class="card-body">
+            <h5 class="card-title">Raspberry healthy</h5>
+            <p class="card-text"></p>
+            <a href="https://www.google.com/search?q=remedies+for+Raspberry+healthy+plant+disease&rlz=1C5CHFA_enIN839IN839&sxsrf=ALeKk02AMJtWKVPRcyH-4rBYQHyOUm9ijQ%3A1617556877525&ei=jfVpYM7NH9mD4-EPyPq5wAg&oq=remedies+for+Raspberry+healthy+plant+disease&gs_lcp=Cgdnd3Mtd2l6EAM6BwgAEEcQsAM6BAgAEB46BggAEAUQHlCC6wNYru4DYPjwA2gBcAJ4AIABsAKIAe4EkgEHMC4yLjAuMZgBAKABAaABAqoBB2d3cy13aXrIAQjAAQE&sclient=gws-wiz&ved=0ahUKEwiOyNr4jOXvAhXZwTgGHUh9DogQ4dUDCA0&uact=5" class="btn btn-outline-success btn-sm">Google Search</a>
+            <a href="https://www.youtube.com/results?search_query=remedies+for+Raspberry+healthy+plant+disease" class="btn btn-outline-danger btn-sm">Youtube Video</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4  mydisease">
+        <div class="card">
+          <img src="https://i.ibb.co/xMvd2Wd/Soybean-healthy.jpg">
+          <div class="card-body">
+            <h5 class="card-title">Soybean healthy</h5>
+            <p class="card-text"></p>
+            <a href="https://www.google.com/search?q=remedies+for+Soybean+healthy+plant+disease&rlz=1C5CHFA_enIN839IN839&sxsrf=ALeKk01XOvD679jv93avX-I0sgut62CgmA%3A1617556942103&ei=zvVpYIDfBfuc4-EPz7OOyAc&oq=remedies+for+Soybean+healthy+plant+disease&gs_lcp=Cgdnd3Mtd2l6EAM6BwgAEEcQsAM6BAgAEB46BggAEAUQHlCnkwVYr5YFYI6aBWgBcAJ4AIABzwGIAdkDkgEFMC4yLjGYAQCgAQGgAQKqAQdnd3Mtd2l6yAEIwAEB&sclient=gws-wiz&ved=0ahUKEwiA_r-XjeXvAhV7zjgGHc-ZA3kQ4dUDCA0&uact=5" class="btn btn-outline-success btn-sm">Google Search</a>
+            <a href="https://www.youtube.com/results?search_query=remedies+for+Soybean+healthy+plant+disease" class="btn btn-outline-danger btn-sm">Youtube Video</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4  mydisease">
+        <div class="card">
+          <img src="https://i.ibb.co/ph7fznc/Squash-Powdery-mildew.jpg">
+          <div class="card-body">
+            <h5 class="card-title">Squash Powdery mildew</h5>
+            <p class="card-text"></p>
+            <a href="https://www.google.com/search?q=remedies+for+Squash+Powdery+mildew+plant+disease&rlz=1C5CHFA_enIN839IN839&sxsrf=ALeKk03kKZhSW0gIeVNc5zKT9rVUQI7tzw%3A1617557028458&ei=JPZpYMKqG8OL4-EPhdGL8AY&oq=remedies+for+Squash+Powdery+mildew+plant+disease&gs_lcp=Cgdnd3Mtd2l6EAM6BwgAEEcQsAM6BAgAEB46BggAEAUQHlDdkgRYjpYEYM2XBGgBcAJ4AIABigGIAZYDkgEDMC4zmAEAoAEBoAECqgEHZ3dzLXdpesgBCMABAQ&sclient=gws-wiz&ved=0ahUKEwjCzNbAjeXvAhXDxTgGHYXoAm4Q4dUDCA0&uact=5" class="btn btn-outline-success btn-sm">Google Search</a>
+            <a href="https://www.youtube.com/results?search_query=remedies+for+Squash+Powdery+mildew+plant+disease" class="btn btn-outline-danger btn-sm">Youtube Video</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4  mydisease">
+        <div class="card">
+          <img src="https://i.ibb.co/G5c8pHV/Strawberry-Leaf-scorch.jpg">
+          <div class="card-body">
+            <h5 class="card-title">Strawberry Leaf scorch</h5>
+            <p class="card-text"></p>
+            <a href="https://www.google.com/search?q=remedies+for+Strawberry+Leaf+scorch&rlz=1C5CHFA_enIN839IN839&sxsrf=ALeKk021-FEaVuIWmSY17PHcF5MYNkWl4A%3A1617616125350&ei=_dxqYI3pFJW6rQGNxbnIBg&oq=remedies+for+Strawberry+Leaf+scorch&gs_lcp=Cgdnd3Mtd2l6EAMyBggAEBYQHjoHCAAQRxCwAzoECCMQJzoHCAAQhwIQFDoCCAA6CAgAELEDEIMBUOSjBViStAVgpLkFaAFwAngBgAGuAYgBqguSAQQwLjEwmAEAoAEBoAECqgEHZ3dzLXdpesgBCMABAQ&sclient=gws-wiz&ved=0ahUKEwjN26LU6ebvAhUVXSsKHY1iDmkQ4dUDCA0&uact=5" class="btn btn-outline-success btn-sm">Google Search</a>
+            <a href="https://www.youtube.com/results?search_query=remedies+for+Strawberry+Leaf+scorch" class="btn btn-outline-danger btn-sm">Youtube Video</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4  mydisease">
+        <div class="card">
+          <img src="https://i.ibb.co/DpQJdXJ/0de0d575-5dd7-4fca-b003-d4a13354c89d-RS-HL-4629.jpg">
+          <div class="card-body">
+            <h5 class="card-title">Strawberry healthy</h5>
+            <p class="card-text"></p>
+            <a href="https://www.google.com/search?q=remedies+for+Strawberry+healthy&rlz=1C5CHFA_enIN839IN839&sxsrf=ALeKk01Q2fQa0Xar2IphiKQVawAUs8ZbcQ%3A1617616215763&ei=V91qYJSMLqTUrtoPqM-q0AU&oq=remedies+for+Strawberry+healthy&gs_lcp=Cgdnd3Mtd2l6EAMyCAghEBYQHRAeOgcIABBHELADOgQIIxAnOgYIABAWEB46AggAOgcIABCHAhAUOggIABCxAxCDAVCshQRYp5YEYP2aBGgBcAJ4AYAB4gmIAfIjkgENMC42LjAuMS42LTEuMpgBAKABAaABAqoBB2d3cy13aXrIAQjAAQE&sclient=gws-wiz&ved=0ahUKEwjUk7H_6ebvAhUkqksFHainCloQ4dUDCA0&uact=5" class="btn btn-outline-success btn-sm">Google Search</a>
+            <a href="https://www.youtube.com/results?search_query=remedies+for+Strawberry+healthy" class="btn btn-outline-danger btn-sm">Youtube Video</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4  mydisease">
+        <div class="card">
+          <img src="https://i.ibb.co/DrPHgvz/Tomato-Bacterial-spot.jpg">
+          <div class="card-body">
+            <h5 class="card-title">Tomato Bacterial spot</h5>
+            <p class="card-text"></p>
+            <a href="https://www.google.com/search?q=remedies+for+Tomato+Bacterial+spot+plant+disease&rlz=1C5CHFA_enIN839IN839&sxsrf=ALeKk00yAkead5Mj1cC2jba3-afRmx-7Wg%3A1617557098172&ei=avZpYL2ECqXDpgfNh5bADw&oq=remedies+for+Tomato+Bacterial+spot+plant+disease&gs_lcp=Cgdnd3Mtd2l6EAM6BwgAEEcQsAM6BAgAEB46BggAEAUQHlDZ6wJY-vECYOLzAmgCcAJ4AIABmAGIAa0DkgEDMC4zmAEAoAEBoAECqgEHZ3dzLXdpesgBCMABAQ&sclient=gws-wiz&ved=0ahUKEwi94fXhjeXvAhWloekKHc2DBfgQ4dUDCA0&uact=5" class="btn btn-outline-success btn-sm">Google Search</a>
+            <a href="https://www.youtube.com/results?search_query=remedies+for+Tomato+Bacterial+spot+plant+disease" class="btn btn-outline-danger btn-sm">Youtube Video</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4  mydisease">
+        <div class="card">
+          <img src="https://i.ibb.co/svScDh2/Tomato-Early-blight.jpg">
+          <div class="card-body">
+            <h5 class="card-title">Tomato Early blight</h5>
+            <p class="card-text"></p>
+            <a href="https://www.google.com/search?q=remedies+for+Tomato+Early+blight+plant+disease&rlz=1C5CHFA_enIN839IN839&sxsrf=ALeKk017vJrk8FBfQ03HaHgXxmvkicM48w%3A1617557146799&ei=mvZpYLewMJqW4-EP07ermAE&oq=remedies+for+Tomato+Early+blight+plant+disease&gs_lcp=Cgdnd3Mtd2l6EAM6BwgAEEcQsAM6BAgAEB46BggAEAUQHlDSggpYnIUKYMyHCmgBcAJ4AIABmQGIAa8DkgEDMC4zmAEAoAEBoAECqgEHZ3dzLXdpesgBCMABAQ&sclient=gws-wiz&ved=0ahUKEwi35Y35jeXvAhUayzgGHdPbChMQ4dUDCA0&uact=5" class="btn btn-outline-success btn-sm">Google Search</a>
+            <a href="https://www.youtube.com/results?search_query=remedies+for+Tomato+Early+blight+plant+disease" class="btn btn-outline-danger btn-sm">Youtube Video</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4  mydisease">
+        <div class="card">
+          <img src="https://i.ibb.co/pysQbKN/Tomato-healthy.jpg">
+          <div class="card-body">
+            <h5 class="card-title">Tomato healthy</h5>
+            <p class="card-text"></p>
+            <a href="https://www.google.com/search?q=remedies+for+Tomato+healthy+plant+disease&rlz=1C5CHFA_enIN839IN839&sxsrf=ALeKk01HwyempmwBkWdzsWZytwUFXpZL0g%3A1617557312582&ei=QPdpYPSXI_HH4-EPlpCs8A8&oq=remedies+for+Tomato+healthy+plant+disease&gs_lcp=Cgdnd3Mtd2l6EAM6BwgAEEcQsAM6BggAEAcQHjoICAAQDRAFEB46CAgAEAcQBRAeOgQIABAeOgYIABAFEB5Qlv8BWIuKAmDrjgJoAnACeACAAYICiAGsBpIBBTAuNC4xmAEAoAEBoAECqgEHZ3dzLXdpesgBCMABAQ&sclient=gws-wiz&ved=0ahUKEwj0t5TIjuXvAhXx4zgGHRYIC_4Q4dUDCA0&uact=5" class="btn btn-outline-success btn-sm">Google Search</a>
+            <a href="https://www.youtube.com/results?search_query=remedies+for+Tomato+healthyt+plant+disease" class="btn btn-outline-danger btn-sm">Youtube Video</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4  mydisease">
+        <div class="card">
+          <img src="https://i.ibb.co/RpfX6dX/Tomato-Late-blight.jpg">
+          <div class="card-body">
+            <h5 class="card-title">Tomato Late blight</h5>
+            <p class="card-text"></p>
+            <a href="https://www.google.com/search?q=remedies+forTomato+Late+blight+plant+disease&rlz=1C5CHFA_enIN839IN839&sxsrf=ALeKk00BMjU67uZF3-Wlae0Q4cmnNWfz8w%3A1617557348375&ei=ZPdpYKGlFuGG4-EPo8K00Ao&oq=remedies+forTomato+Late+blight+plant+disease&gs_lcp=Cgdnd3Mtd2l6EAMyBQgAEM0COgcIABBHELADOgQIABAeOgYIABAFEB5QqoQDWImHA2DFjANoAnACeACAAaYBiAHVA5IBAzAuM5gBAKABAaABAqoBB2d3cy13aXrIAQjAAQE&sclient=gws-wiz&ved=0ahUKEwih55zZjuXvAhVhwzgGHSMhDaoQ4dUDCA0&uact=5" class="btn btn-outline-success btn-sm">Google Search</a>
+            <a href="https://www.youtube.com/results?search_query=remedies+for+Tomato+Late+blight+plant+disease" class="btn btn-outline-danger btn-sm">Youtube Video</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4  mydisease">
+        <div class="card">
+          <img src="https://i.ibb.co/vLNw0pP/Tomato-Leaf-Mold.jpg">
+          <div class="card-body">
+            <h5 class="card-title">Tomato Leaf Mold</h5>
+            <p class="card-text"></p>
+            <a href="https://www.google.com/search?q=remedies+for+Tomato+Leaf+Mold+plant+diseases&rlz=1C5CHFA_enIN839IN839&sxsrf=ALeKk01g2lW9vLbO3L5Ct1IcnuotF7gRCw%3A1617557400251&ei=mPdpYOT3Ds6E4-EP6cOpkAE&oq=remedies+for+Tomato+Leaf+Mold+plant+diseases&gs_lcp=Cgdnd3Mtd2l6EAM6BwgAEEcQsAM6BggAEAcQHjoICAAQDRAFEB46CAgAEAcQBRAeOgQIABAeOgYIABAFEB5QgooCWNizAmDMuwJoAXACeACAAaUBiAGECJIBAzAuN5gBAKABAaABAqoBB2d3cy13aXrIAQjAAQE&sclient=gws-wiz&ved=0ahUKEwjko_vxjuXvAhVOwjgGHelhChIQ4dUDCA0&uact=5" class="btn btn-outline-success btn-sm">Google Search</a>
+            <a href="https://www.youtube.com/results?search_query=remedies+for+Tomato+Leaf+Mold+plant+disease" class="btn btn-outline-danger btn-sm">Youtube Video</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4  mydisease">
+        <div class="card">
+          <img src="https://i.ibb.co/Bf8Gz49/Tomato-Septoria-leaf-spot.jpg">
+          <div class="card-body">
+            <h5 class="card-title">Tomato Septoria leaf spot</h5>
+            <p class="card-text"></p>
+            <a href="https://www.google.com/search?q=remedies+for+Tomato+Septoria+leaf+spot+plant+disease&rlz=1C5CHFA_enIN839IN839&sxsrf=ALeKk00j7lH4VVKZkgBy-vtwBRnyKQldGA%3A1617557483571&ei=6_dpYOyiIpeW4-EPs86TuA4&oq=remedies+for+Tomato+Septoria+leaf+spot+plant+disease&gs_lcp=Cgdnd3Mtd2l6EAMyBAgjECc6BwgAEEcQsANQkB5YkB5ghSFoAXACeACAAdgBiAH0ApIBBTAuMS4xmAEAoAEBqgEHZ3dzLXdpesgBCMABAQ&sclient=gws-wiz&ved=0ahUKEwisxNiZj-XvAhUXyzgGHTPnBOcQ4dUDCA0&uact=5" class="btn btn-outline-success btn-sm">Google Search</a>
+            <a href="https://www.youtube.com/results?search_query=remedies+for+Tomato+Septoria+leaf+spot+plant+disease" class="btn btn-outline-danger btn-sm">Youtube Video</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4  mydisease">
+        <div class="card">
+          <img src="https://i.ibb.co/SNfjp1T/Tomato-Spider-mites-Two-spotted-spider-mite.jpg">
+          <div class="card-body">
+            <h5 class="card-title">Tomato Spider mites Two-spotted spider mite</h5>
+            <p class="card-text"></p>
+            <a href="https://www.google.com/search?q=remedies+for+Tomato+Spider+mites+Two-spotted+spider+mite+plant+disease&rlz=1C5CHFA_enIN839IN839&sxsrf=ALeKk01ivMn27oZWpyK3jxi5sYA_8_VU9A%3A1617557488896&ei=8PdpYNOcNrmF4-EP-6KOiA4&oq=remedies+for+Tomato+Spider+mites+Two-spotted+spider+mite+plant+disease&gs_lcp=Cgdnd3Mtd2l6EAM6BwgjELADECc6BwgAEEcQsAM6BAgAEB46BggAEAUQHlCR7gFYqfEBYKaMAmgBcAJ4AIAB0wGIAfYDkgEFMC4yLjGYAQCgAQGgAQKqAQdnd3Mtd2l6yAEJwAEB&sclient=gws-wiz&ved=0ahUKEwjT1J2cj-XvAhW5wjgGHXuRA-EQ4dUDCA0&uact=5" class="btn btn-outline-success btn-sm">Google Search</a>
+            <a href="https://www.youtube.com/results?search_query=remedies+for+Tomato+Spider+mites+Two-spotted+spider+mite+plant+disease
+            " class="btn btn-outline-danger btn-sm">Youtube Video</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4  mydisease">
+        <div class="card">
+          <img src="https://i.ibb.co/fCkWqmw/Tomato-Target-Spot.jpg">
+          <div class="card-body">
+            <h5 class="card-title">Tomato Target Spot</h5>
+            <p class="card-text"></p>
+            <a href="https://www.google.com/search?q=remedies+for+Tomato+Target+Spot+plant+disease&rlz=1C5CHFA_enIN839IN839&sxsrf=ALeKk01aL6UOk8i800szDUNwt1DMR4htzw%3A1617557524174&ei=FPhpYJ-QCsPE4-EP1caIgAQ&oq=remedies+for+Tomato+Target+Spot+plant+disease&gs_lcp=Cgdnd3Mtd2l6EAM6BwgAEEcQsAM6BAgAEB46BggAEAUQHlDhgilY1MkpYPbNKWgBcAJ4AIAB8wGIAYMFkgEFMC4zLjGYAQCgAQGgAQKqAQdnd3Mtd2l6yAEIwAEB&sclient=gws-wiz&ved=0ahUKEwif6oatj-XvAhVD4jgGHVUjAkAQ4dUDCA0&uact=5" class="btn btn-outline-success btn-sm">Google Search</a>
+            <a href="https://www.youtube.com/results?search_query=remedies+for+Tomato+Target+Spot+plant+disease" class="btn btn-outline-danger btn-sm">Youtube Video</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4  mydisease">
+        <div class="card">
+          <img src="https://i.ibb.co/X4Jz576/Tomato-Tomato-mosaic-virus.jpg">
+          <div class="card-body">
+            <h5 class="card-title">Tomato Tomato mosaic virus</h5>
+            <p class="card-text"></p>
+            <a href="https://www.google.com/search?q=remedies+for+Tomato+Tomato+mosaic+virus+plant+disease&rlz=1C5CHFA_enIN839IN839&sxsrf=ALeKk02A0-WH_QM8XcVP8-ykO1JQhsIPuQ%3A1617558206955&ei=vvppYJTPOZnA3LUPue-m6Ao&oq=remedies+for+Tomato+Tomato+mosaic+virus+plant+disease&gs_lcp=Cgdnd3Mtd2l6EAM6BwgAEEcQsAM6BAgAEB46BggAEAUQHlDrlBpYpqAaYP6lGmgCcAJ4AIABmQGIAc8EkgEDMC40mAEAoAEBoAECqgEHZ3dzLXdpesgBCMABAQ&sclient=gws-wiz&ved=0ahUKEwiUptDykeXvAhUZILcAHbm3Ca0Q4dUDCA0&uact=5" class="btn btn-outline-success btn-sm">Google Search</a>
+            <a href="https://www.youtube.com/results?search_query=remedies+for+Tomato+Tomato+mosaic+virus+plant+disease" class="btn btn-outline-danger btn-sm">Youtube Video</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4  mydisease">
+        <div class="card">
+          <img src="https://i.ibb.co/YWYQZkR/Tomato-Tomato-Yellow-Leaf-Curl-Virus.jpg">
+          <div class="card-body">
+            <h5 class="card-title">Tomato Tomato Yellow Leaf Curl Virus</h5>
+            <p class="card-text"></p>
+            <a href="https://www.google.com/search?q=remedies+for+Tomato+Tomato+Yellow+Leaf+Curl+Virus+plant+disease&rlz=1C5CHFA_enIN839IN839&sxsrf=ALeKk005Qub90Weh9Rls7doh3K0Ok5y4bA%3A1617558638836&ei=bvxpYNLEMuqP4-EP-buO4AQ&oq=remedies+for+Tomato+Tomato+Yellow+Leaf+Curl+Virus+plant+disease&gs_lcp=Cgdnd3Mtd2l6EAM6BwgAEEcQsAM6BAgAEB46BggAEAUQHlDBxiNY4c8jYIrUI2gBcAJ4AIABmwGIAagEkgEDMC40mAEAoAEBoAECqgEHZ3dzLXdpesgBCMABAQ&sclient=gws-wiz&ved=0ahUKEwjSs8jAk-XvAhXqxzgGHfmdA0wQ4dUDCA0&uact=5" class="btn btn-outline-success btn-sm">Google Search</a>
+            <a href="https://www.youtube.com/results?search_query=remedies+for+Tomato+Tomato+Yellow+Leaf+Curl+Virus+plant+disease" class="btn btn-outline-danger btn-sm">Youtube Video</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- partial -->
+  <script src='https://code.jquery.com/jquery-3.3.1.slim.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js'></script>
+<script src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js'></script>
+<script src='https://use.fontawesome.com/releases/v5.8.1/js/all.js'></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#myinput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $(".mydisease").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
+
+{% endblock %}

@@ -1,0 +1,130 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% load cart %}
+{% load custom_filter %}
+<!-- body -->
+<style>
+
+#myInput {
+  width: 100%; /* Full-width */
+  font-size: 20px; /* Increase font-size */
+  padding: 12px 20px 12px 40px; /* Add some padding */
+  border: 1px solid rgb(24, 2, 2); /* Add a grey border */
+  margin-bottom: 12px; /* Add some space below the input */
+}
+.myUL{
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  display: block
+}
+
+</style>
+
+<div class="container-fluid mt-3">
+	<div class="row">
+
+		<!-- filter -->
+
+		<div class="col-lg-3 mx-auto">
+			
+		    <input type="text" id="myInput" placeholder="&#128269 Search for products...">
+			<div class="list-group">
+
+				<b><a href="/" class="list-group-item list-group-item-action"><h5>All Categories</h5></a></b>
+
+				{% for category in categories %}
+				<i><a href="/?category={{category.id}}"
+					class="list-group-item list-group-item-action myUL">{{category.name}}</a></i>
+				{% endfor %}
+			</div>
+		</div>
+
+		<!-- all products -->
+		<div id='products' class="col-lg-9 mx-auto">
+			<div class="row mx-auto" >
+				{% for product in products %}
+				<div class="card mx-auto mb-3 myList" id={{product.id}} style="width: 18rem;">
+					<img class="card-img-top" src="{{product.image.url}}" alt="Card image cap" width="300" height="250">
+					<div class="card-body" >
+						<p class="card-title"><b>{{product.name}}</b></p>
+						<p class="card-title"><i>{{product.description}}</i></p>
+						<p class="card-text"><b>{{product.price|currency}}</b></p>
+						<!-- {{product | is_in_cart:request.session.cart }} -->
+					</div>
+
+
+					<div class="card-footer p-0 no-gutters">
+
+						{% if product|is_in_cart:request.session.cart %}
+						<div class="row no-gutters">
+							<form action="/#{{product.id}}" class="col-2 " method="post">
+								{% csrf_token %}
+								<input hidden type="text" name='product' value='{{product.id}}'>
+								<input hidden type="text" name='remove' value='True'>
+								<input type="submit" value=" - " class="btn btn-block btn-light border-right">
+							</form>
+							<div class="text-center col">{{product|cart_quantity:request.session.cart}} in Cart</div>
+							<form action="/#{{product.id}}" class="col-2 " method="post">
+								{% csrf_token %}
+								<input hidden type="text" name='product' value='{{product.id}}'>
+								<input type="submit" value=" + " class="btn btn-block btn-light border-left">
+							</form>
+						</div>
+						{% else %}
+						<form action="/#{{product.id}}" method="POST" class="btn-block">
+							{% csrf_token %}
+							<input hidden type="text" name='product' value='{{product.id}}'>
+							
+							<input type="submit" class="float-right btn btn-success  form-control"
+								value="&#128722 Add To Cart">
+						</form>
+						{% endif %}
+
+					</div>
+
+				</div>
+				{% endfor %}
+				
+				<br><br><br>
+				<div class="mx-auto">
+					{% if products.paginator.num_pages > 1 %} <!-- if more than one page required only then will pagination div will show -->
+						<hr>
+						<div class="text-center">
+							{% for pg in products.paginator.page_range %}
+								<a href="?page={{pg}}" class="btn btn-light btn btn-lg {% if products.number == pg %}active{% endif %}"> {{pg}} </a>
+							{% endfor %}
+						</div>
+						<hr>
+					{% endif %}
+				</div>
+				<br><br><br><br><br>
+		
+				
+				
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $(".myList").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
+
+{% endblock %}

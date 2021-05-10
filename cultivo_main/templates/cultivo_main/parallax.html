@@ -1,0 +1,622 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+
+  <title>AGROS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css" rel="stylesheet" type="text/css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.18/css/bootstrap-select.min.css" rel="stylesheet" type="text/css" />
+  
+  {%load static%}
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+ 
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/remixicon/remixicon.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
+
+
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+    <!--FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display|Poppins" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+<style>
+
+html, body {
+  margin:0;
+  padding:0;
+  width:100%;
+  height:100vh;
+  font-family: "Playfair Display";
+  font-weight:lighter;
+}
+
+
+.con1
+{
+  opacity: .8;
+  /*background-color: #383D00*/;
+  background-color:#919693;
+  color: white;
+  font-family: "Playfair Display";
+  font-weight:lighter;
+  width: 70%;
+
+}
+
+.con2
+{
+  opacity: .8;
+  background-color: #D69003;
+  color: white;
+  font-family: "Playfair Display";
+  font-weight:lighter;
+}
+
+
+
+.parallax {
+    background-image: url(https://i.ibb.co/V36CSQq/cultivo-3.jpg);
+
+    height: 100%; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.parallax2 {
+    background-image: url(https://i.ibb.co/V36CSQq/cultivo-3.jpg);
+
+    height: 1%; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+
+nav{
+      background-color: rgb(8, 8, 8);
+      height: 100px;
+      
+    }
+    .one-edge-shadow {
+              box-shadow: 0 8px 2px -5px rgb(127, 11, 11);
+    }
+    .display-8{
+      font-weight: 200;
+      font-size: 30px;
+    }
+
+    .goog-te-banner-frame.skiptranslate {
+        display: none !important;
+    } 
+    body {
+        top: 0px !important; 
+        background-color:white;
+        
+    }
+    .goog-logo-link {
+        display:none !important;
+    }
+ 
+.copyright {
+  padding: 28px 0;
+  margin-top: 55px;
+  background-color: #202020; }
+  .copyright span,
+  .copyright a {
+    color: #878787;
+    -webkit-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    transition: all 0.3s linear; }
+  .copyright a:hover {
+    color:#007bff; }                         
+
+.copyright-menu ul {
+  text-align: right;
+  margin: 0; }
+
+.copyright-menu li {
+  display: inline-block;
+  padding-left: 20px; }
+
+.back-to-top {
+  position: relative;
+  z-index: 2; }
+  .back-to-top .btn-dark {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    padding: 0;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #2e2e2e;
+    border-color: #2e2e2e;
+    display: none;
+    z-index: 999;
+    -webkit-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    transition: all 0.3s linear; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+#name
+{
+  position:absolute;
+  top:17%;
+  left:50%;
+  transform:translate(-50%, -50%);
+  color:white;
+  font-size:48px;
+  font-family: "Playfair Display";
+  font-weight:lighter;
+}
+
+
+th,td
+{
+  text-align:center;
+}
+
+
+
+/* my positioning css */
+._profile {
+  
+  top: 50%;
+  left: 50%;
+  margin: 0 0 0 2em;
+}
+
+/* main icon */
+._profile {
+	height: 4em; /* height == width */
+	width: 4em;
+	border: 2px solid rgb(181, 172, 172);
+	border-radius: 50%;
+	overflow: hidden;
+}
+/* profile head */
+._head {
+	background: rgb(181, 172, 172);
+	border-radius: 100%;
+	width: 45%;
+	height: 45%;
+	margin: 15% auto 5%;
+}
+/* profile body */
+._body {
+	background:rgb(181, 172, 172);
+	width: 65%;
+	height: 40%;
+	margin: auto;
+	border-top-left-radius: 50%;
+	border-top-right-radius: 50%;
+}
+
+
+   
+@media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+  }
+}
+
+.glyphicon {  margin-bottom: 10px;margin-right: 10px;}
+
+small {
+display: block;
+line-height: 1.428571429;
+color: #999;
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+
+  
+  <!-- navbar -->
+
+  <nav class="one-edge-shadow 
+  sticky-top navbar 
+  navbar-expand-lg
+   navbar-light bg-black">
+    <a class="navbar-brand text-white" href="/" style="font-size: 25px;">AGROS</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link text-white" href="/store" style="font-size: 18px;">Store <span class="sr-only">(current)</span></a>
+        </li>
+        
+        {% if request.session.customer or request.session.farmer %}
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-list-4" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar-list-4">
+          <ul class="navbar-nav">
+              <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <div class='_profile'>
+                  <div class='_head'></div>
+                  <div class='_body'></div>
+                </div>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style="color: #2e2e2e;width: 350px;">
+                <a><h4>Name: {{ firstname }} {{ lastname }}</h4></a>
+                <a><h4>E-mail: {{ email }}</h4></a>
+                <a><h4>Phone: {{ phone }}</h4></a>
+                
+                <!--<a class="dropdown-item">Log Out</a>-->
+              </div>
+            </li>   
+          </ul>
+        </div>
+        {% endif %}
+
+      </ul>
+
+
+      <ul class=" navbar-nav my-2 my-lg-0">
+
+    
+
+        <li class="nav-item ">
+          <a class="nav-link text-white" href="/aboutus" style="font-size: 18px;">AboutUs<span class="sr-only">(current)</span></a>
+        </li>
+
+        {% if request.session.customer %}
+
+          <li class="nav-item ">
+            <a class="nav-link text-white" href="/cart" style="font-size: 18px;">Cart 
+              <span class="badge badge-info">{{request.session.cart.keys|length}}</span>
+              <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link text-white" href="/orders" style="font-size: 18px;">Orders<span class="sr-only">(current)</span></a>
+          </li>
+ 
+
+        {% endif %}
+
+
+
+        {% if request.session.farmer %}
+        
+          <li class="nav-item ">
+            <a class="nav-link text-white" href="/addProducts" style="font-size: 18px;">AddProducts<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link text-white" href="/farmorder" style="font-size: 18px;">FarmOrders<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link text-white" href="/crs" style="font-size: 18px;">CropRecommendation<span class="sr-only">(current)</span></a>
+          </li>
+  
+          <li class="nav-item ">
+            <a class="nav-link text-white" href="/pdd" style="font-size: 18px;">PlantDisease<span class="sr-only">(current)</span></a>
+          </li>
+  
+          <li class="nav-item ">
+            <a class="nav-link text-white" href="/remedies" style="font-size: 18px;">PlantRemedies<span class="sr-only">(current)</span></a>
+          </li>
+
+          <li class="nav-item ">
+            <a class="nav-link text-white" href="/weatherdatas" style="font-size: 18px;">Weather<span class="sr-only">(current)</span></a>
+          </li>
+        
+  
+
+        {% endif %}
+        
+        {% if request.session.customer or request.session.farmer %}
+        
+        <li class="nav-item ">
+          <a class="nav-link text-white" href="/logout" style="font-size: 18px;">Logout<span class="sr-only">(current)</span></a>
+        </li>
+        {% else %}
+        <li class="nav-item ">
+          <a class="nav-link text-white" href="/login" style="font-size: 18px;">Login<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link text-white" href="/signup" style="font-size: 18px;">Signup<span class="sr-only">(current)</span></a>
+        </li>
+  
+        {% endif %}
+
+    
+
+
+  
+       <!--Google translate select options-->
+
+       <div id="google_translate_element"></div>
+       
+     </ul>
+
+
+   </div>
+ </nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    <div id="name">Crop Recommendation System</div>
+
+    <!--<div id="name"><a href={% url 'cultivo_main:home'%}>Cultivo</a></div>-->
+
+
+<!-- ===================================================================================================================== -->
+<center>
+<div class="parallax" style="padding-top: 245px">
+
+  <div class='con1' align='center'>
+    <div>
+      <h5 style="margin-bottom:12px;margin-top: 0px;padding-top: 20px; color: black;">You are in</h6>
+      <u><span style='font-size:18px;margin-top: 15px; color: black;'>{{final.district|title}}, </span><span style='font-size:18px; color: black;'>{{final.state|title}}</span></u>
+    </div><br>
+    <div style="margin: -10px 0 -10px 0;"><p style="font-size: 100px; color: black;">{{temp_det.temperature}}<sup>o</sup>C</p></div><br>
+    <div style=" padding-bottom: 10px;">
+      <span style="padding-left:10px; color: black;"><img style="padding-right:5px;margin-top:5px; color: black;" src="{% static 'cultivo_main/icon-umberella.png' %}" alt="">{{temp_det.humidity}}</span>
+      <span style="padding-left:10px; color: black;"><img style="padding-right:5px;margin-top:5px; color: black;" src="{% static 'cultivo_main/icon-wind.png'%}" alt="">{{temp_det.windspeed}}</span>
+      <span style="padding-left:10px; color: black;"><img style="padding-right:5px;margin-top:5px; color: black;" src="{% static 'cultivo_main/icon-compass.png'%}" alt="">{{temp_det.winddirection}} <sup>o</sup></span>
+      <span style="padding-left:10px; color: black;"><img style="padding-right:5px;margin-top:5px; color: black;" src="{% static 'cultivo_main/icon-umberella.png' %}" alt="">{{temp_det.humidity}}</span>
+      <span style="padding-left:10px; color: black;"><img style="padding-right:5px;margin-top:5px; color: black;" src="{% static 'cultivo_main/icon-wind.png'%}" alt="">{{temp_det.latitude}} <sup>o</sup></span>
+      <span style="padding-left:10px; color: black;"><img style="padding-right:5px;margin-top:5px; color: black;" src="{% static 'cultivo_main/icon-compass.png'%}" alt="">{{temp_det.longitude}} <sup>o</sup></span>
+    </div>
+  </div>
+</div>
+</center>
+<!-- ===================================================================================================================== -->
+<center>
+<div class="parallax" style="margin-top: -1px;">
+      
+
+      <div class='con1' align="center">
+        
+        <h3 style="margin-top: 0px;padding-top: 35px; color: black;"><u>Soil condition of {{final.district|title}}:</u></h3><br>
+        <table border="0" style="padding-bottom: 20px;font-size: 20px; color: black;" cellspacing="70px">
+        <tr>
+          <th>Density</th>
+          <th>Precipitation</th>
+          <th>Pressure</th>
+          <th>Skin temperature</th>
+          <th>Humidity</th>
+          <th>Wind</th>
+        </tr>
+        <tr>
+          <td>{{soil.bulk_soil_density}}</td>
+          <td>{{soil.precip}}</td>
+          <td>{{soil.pres_avg}}</td>
+           <td>{{soil.skin_temp_avg}}</td>
+          <td>{{soil.specific_humidity}}</td>
+          <td>{{soil.wind_10m_spd_avg}}</td>
+        </tr>
+      </table>
+
+</div>
+</div>
+</center>
+<!-- ===================================================================================================================== -->
+
+<center>
+<div class="parallax"  style="margin-top: -1px;">
+      
+
+      <div class='con1'  align="center">
+        
+        <h3 style="margin-top: 0px;padding-top: 35px; color: black;"><u>Insights about {{final.crop|title}}:</u></h3><br>
+        <table border="0" style="padding-bottom: 20px;font-size: 20px; color: black;" cellspacing="40px">
+        <tr>
+          <th>Production</th>
+          <th>Imports</th>
+          <th>Exports</th>
+          <th>Prod/Sq.Area</th>
+          <th>Gross Production</th>
+          <!-- <th>Wind</th> -->
+        </tr>
+        <tr>
+          <td>{{final.production}}</td>
+          <td>{{final.imports}}</td>
+          <td>{{final.exports}}</td>
+           <td>{{final.pred_val}}</td>
+          <td>{{final.Gross_Production_Value_constant_2004_2006_million_US_dollar}}</td>
+          <!-- <td>{{final.wind_10m_spd_avg}}</td> -->
+        </tr>
+      </table>
+
+</div>
+</div>
+</center>
+<!-- ===================================================================================================================== -->
+<center>
+<div class="parallax"  style="margin-top: -1px;">
+      
+
+      <div class='con1'  align="center">
+        
+        <h2 style="margin-top: 0px;padding-top: 35px; color: black;"><u>Final Verdict</u></h2><br>
+        <span style="font-size: 100px;margin-top: -70px; color: black;">
+          {{finalout_main}}
+        </span>
+        <span style="font-size: 40px; margin-left: -35px; color: black;">.{{finalout_dec}}</span>
+        <span style="font-size: 100px;margin-top: -70px; color: black;">
+          %
+        </span>
+        
+         <div style="margin-top: 35px;padding-bottom: 20px; color: black;">Predicted for <u>{{final.crop}}</u> in <u>{{final.district}}</u></div>
+
+</div>
+</div>
+</center>
+<center>
+  <div class="parallax"  style="margin-top: -1px;">
+      
+
+      <div class='con1'  align="center">
+        
+        <h3 style="margin-top: 0px;padding-top: 35px; color: black;"><u>Other Suggestions</u></h3><br>
+        <div>
+          <table  border="0" style="padding-bottom: 20px;margin-top:-17px;font-size: 25px; color: black;" cellspacing="32px">
+            {% for key, value in ff.items %}
+            <tr>
+                <td>{{key}}</td>
+                <td>{{value}}% 
+            </tr>
+            {% endfor %} 
+          </table>
+        </div>
+
+</div>
+</div>
+</center>
+
+
+       <!--<div class='parallax2' style="padding-top: 10px;padding-bottom: 10px;height: 50px;margin-top: -100px;margin-bottom: -50px;"><div align='center' class="con2">&copy All rights reserved 2018-2019</div></div>-->
+
+
+    <!--<iframe width="350" height="430" allow="microphone;" src="https://console.dialogflow.com/api-client/demo/embedded/70d21978-4350-401c-83d7-d1a6688a91e7"></iframe>-->
+    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+    <df-messenger
+      chat-icon="https:&#x2F;&#x2F;i.ibb.co&#x2F;nCZLxbM&#x2F;Capture.png"
+      intent="WELCOME"
+      chat-title="AGROS-FAQs"
+      agent-id="70d21978-4350-401c-83d7-d1a6688a91e7"
+      language-code="en"
+    ></df-messenger>
+  
+       <!-- ======= Footer ======= -->
+       <footer id="footer">
+         <div class="container">
+           <h3>Agro Services and Solutions</h3>
+           <div class="social-links">
+             <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+             <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+             <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+             <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+             <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+           </div>
+           <div class="copyright">
+             &copy; Copyright <strong><span>BISAG</span></strong>. All Rights Reserved
+           </div>
+           <div class="credits">
+             <!-- All the links in the footer should remain intact. -->
+             <!-- You can delete the links only if you purchased the pro version. -->
+             <!-- Licensing information: https://bootstrapmade.com/license/ -->
+             <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/knight-simple-one-page-bootstrap-template/ -->
+             
+           </div>
+         </div>
+         <div id="preloader"></div>
+         <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+       
+       </footer><!-- End Footer -->
+     
+     
+     
+
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+}
+</script>
+
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+
+    
+     
+<script type="text/javascript">
+  $('input[name="group"]').on("click", function(){
+  $("#template_1").toggle(this.value === "farmer" && this.checked);
+});
+</script>
+
+
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
+  <script src="{% static 'assets/vendor/purecounter/purecounter.js' %}"></script>
+  <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'assets/js/main.js' %}"></script>
+     
+
+
+
+
+
+
+
+</body>
+</html>

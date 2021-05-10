@@ -1,0 +1,639 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>AGROS</title>
+
+
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css" rel="stylesheet" type="text/css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.18/css/bootstrap-select.min.css" rel="stylesheet" type="text/css" />
+  
+  {%load static%}
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+ 
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/remixicon/remixicon.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
+
+
+
+
+
+    <!-- JQUERY -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+    <!--FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display|Poppins" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    </head>
+
+    <style>
+    html, body {
+  margin:0;
+  padding:0;
+  width:100%;
+  height:100vh;
+  font-family: "Playfair Display";
+  font-weight:lighter;
+}
+body {
+  /*https://hdqwalls.com/wallpapers/sunset-fields-wide.jpg*/
+   background: url(https://i.ibb.co/V36CSQq/cultivo-3.jpg) no-repeat 50% 50%;   background-size:cover;
+  
+}
+
+
+
+
+nav{
+      background-color: rgb(10, 10, 10);
+      height: 60px;
+      
+    }
+    .one-edge-shadow {
+              box-shadow: 0 8px 2px -5px rgb(127, 11, 11);
+    }
+    .display-8{
+      font-weight: 200;
+      font-size: 30px;
+    }
+
+    .goog-te-banner-frame.skiptranslate {
+        display: none !important;
+    } 
+    body {
+        top: 0px !important; 
+        background-color:white;
+        
+    }
+    .goog-logo-link {
+        display:none !important;
+    }
+ 
+.copyright {
+  padding: 28px 0;
+  margin-top: 55px;
+  background-color: #202020; }
+  .copyright span,
+  .copyright a {
+    color: #878787;
+    -webkit-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    transition: all 0.3s linear; }
+  .copyright a:hover {
+    color:#007bff; }                         
+
+.copyright-menu ul {
+  text-align: right;
+  margin: 0; }
+
+.copyright-menu li {
+  display: inline-block;
+  padding-left: 20px; }
+
+.back-to-top {
+  position: relative;
+  z-index: 2; }
+  .back-to-top .btn-dark {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    padding: 0;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #2e2e2e;
+    border-color: #2e2e2e;
+    display: none;
+    z-index: 999;
+    -webkit-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    transition: all 0.3s linear; }
+
+
+
+
+/* my positioning css */
+._profile {
+  
+  top: 50%;
+  left: 50%;
+  margin: 0 0 0 2em;
+}
+
+/* main icon */
+._profile {
+	height: 4em; /* height == width */
+	width: 4em;
+	border: 2px solid rgb(181, 172, 172);
+	border-radius: 50%;
+	overflow: hidden;
+}
+/* profile head */
+._head {
+	background: rgb(181, 172, 172);
+	border-radius: 100%;
+	width: 45%;
+	height: 45%;
+	margin: 15% auto 5%;
+}
+/* profile body */
+._body {
+	background:rgb(181, 172, 172);
+	width: 65%;
+	height: 40%;
+	margin: auto;
+	border-top-left-radius: 50%;
+	border-top-right-radius: 50%;
+}
+
+
+   
+@media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+  }
+}
+
+.glyphicon {  margin-bottom: 10px;margin-right: 10px;}
+
+small {
+display: block;
+line-height: 1.428571429;
+color: #999;
+}
+
+
+
+
+
+
+
+
+
+
+
+#name
+{
+  position:absolute;
+  top:17%;
+  left:50%;
+  transform:translate(-50%, -50%);
+  color:white;
+  font-size:48px;
+  font-family: "Playfair Display";
+  font-weight:lighter;
+}
+h3
+{
+  position:absolute;
+  top:90%;
+  left:50%;
+  transform:translate(-50%, -50%);
+  color:#fff;
+  font-size:18px;
+  font-family: "Playfair Display";
+  font-weight:lighter;
+}
+
+a {
+  text-decoration:none;
+  color:#fff;
+}
+*,:after,:before{box-sizing:border-box}
+        .clearfix:after,.clearfix:before{content:'';display:table}
+        .clearfix:after{clear:both;display:block}
+        a{color:inherit;text-decoration:none}
+        
+        .login-wrap{
+          top:25%;
+          
+            width:100%;
+            margin:auto;
+            max-width:835px;
+            min-height:220px;
+            position:relative;
+            box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
+        }
+        .login-html{
+            width:100%;
+            height:100%;
+            position:absolute;
+            padding:40px 70px 20px 70px;
+            background:#919693;
+            opacity:.77;
+            outline:none !important;
+        }
+        .login-html .sign-in-htm,
+        .login-html .sign-up-htm{
+            top:0;
+            left:0;
+            right:0;
+            bottom:0;
+            position:absolute;
+            /* transform:rotateY(180deg); */
+            /* backface-visibility:hidden; */
+            /* transition:all .4s linear; */
+        }
+        .login-html .sign-in,
+        .login-html .sign-up,
+        .login-form .group .check{
+            display:none;
+        }
+        .login-html .tab,
+        .login-form .group .label,
+        .login-form .group .button{
+            text-transform:uppercase;
+        }
+        .login-html .tab{
+            font-size:27px;
+            margin-right:15px;
+            padding-bottom:5px;
+            margin:0 15px 10px 0;
+            display:inline-block;
+            border-bottom:2px solid transparent;
+        }
+        .login-html .sign-in:checked + .tab,
+        .login-html .sign-up:checked + .tab{
+            color:#fff;
+            border-color:#2c420b;
+        }
+        .login-form{
+            min-height:345px;
+            position:relative;
+            perspective:1000px;
+            transform-style:preserve-3d;
+        }
+        .login-form .group{
+            margin-bottom:15px;
+        }
+        .login-form .group .label,
+        .login-form .group .input,
+        .login-form .group .button{
+            width:100%;
+            color:#fff;
+            display:block;
+            outline:none !important;  
+        }
+        .login-form .group .input,
+        .login-form .group .button{
+            border:none;
+            padding:15px 20px;
+            border-radius:25px;
+            background:rgba(255,255,255,.1);
+        }
+        .login-form .group input[data-type="password"]{
+            /*text-security:circle;*/
+            -webkit-text-security:circle;
+        }
+        .login-form .group .label{
+            color:white;
+            font-size:20px;
+        }
+        .login-form .group .button{
+            background:#2c420b;
+        }
+        .login-form .group label .icon{
+            width:15px;
+            height:15px;
+            border-radius:2px;
+            position:relative;
+            display:inline-block;
+            background:rgba(255,255,255,.1);
+        }
+        .login-form .group label .icon:before,
+        .login-form .group label .icon:after{
+            content:'';
+            width:10px;
+            height:2px;
+            background:#fff;
+            position:absolute;
+            transition:all .2s ease-in-out 0s;
+        }
+        .login-form .group label .icon:before{
+            left:3px;
+            width:5px;
+            bottom:6px;
+            transform:scale(0) rotate(0);
+        }
+        .login-form .group label .icon:after{
+            top:6px;
+            right:0;
+            transform:scale(0) rotate(0);
+        }
+        .login-form .group .check:checked + label{
+            color:#fff;
+        }
+        .login-form .group .check:checked + label .icon{
+            background:#2c420b;
+        }
+        .login-form .group .check:checked + label .icon:before{
+            transform:scale(1) rotate(45deg);
+        }
+        .login-form .group .check:checked + label .icon:after{
+            transform:scale(1) rotate(-45deg);
+        }
+        .login-html .sign-in:checked + .tab + .sign-up + .tab + .login-form .sign-in-htm{
+            transform:rotate(0);
+        }
+        .login-html .sign-up:checked + .tab + .login-form .sign-up-htm{
+            transform:rotate(0);
+        }
+        
+        .hr{
+            height:3px;
+            
+            background:rgba(255,255,255,.2);
+        }
+        .foot-lnk{
+            text-align:center;
+        }
+
+#container222
+{
+  position:absolute;
+  top:35%;
+  left:19%;
+
+  color:white;
+  font-size:30px;
+  font-family: "Playfair Display";
+  font-weight:lighter;
+}
+
+
+#link_another
+{
+    color:white;
+    font-size:12px;
+    margin-top:20px;
+    font-family: "Playfair Display";
+  font-weight:lighter;
+}
+
+</style>
+  <body>
+      
+    
+
+  
+  <!-- navbar -->
+
+  <nav class="one-edge-shadow 
+  sticky-top navbar 
+  navbar-expand-lg
+   navbar-light bg-black">
+    <a class="navbar-brand text-white" href="/" style="font-size: 25px;">AGROS</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link text-white" href="/store" style="font-size: 18px;">Store <span class="sr-only">(current)</span></a>
+        </li>
+        {% if request.session.customer or request.session.farmer %}
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-list-4" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar-list-4">
+          <ul class="navbar-nav">
+              <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <div class='_profile' onclick="myFunction()">
+                  <div class='_head'></div>
+                  <div class='_body'></div>
+                </div>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style="color: #2e2e2e;width: 350px;">
+                <a><h4>Name: {{ firstname }} {{ lastname }}</h4></a>
+                <a><h4>E-mail: {{ email }}</h4></a>
+                <a><h4>Phone: {{ phone }}</h4></a>
+                
+                <!--<a class="dropdown-item">Log Out</a>-->
+              </div>
+            </li>   
+          </ul>
+        </div>
+        {% endif %}
+
+
+      </ul>
+
+
+      <ul class=" navbar-nav my-2 my-lg-0">
+
+    
+
+        <li class="nav-item ">
+          <a class="nav-link text-white" href="/aboutus" style="font-size: 18px;">AboutUs<span class="sr-only">(current)</span></a>
+        </li>
+
+        {% if request.session.customer %}
+
+          <li class="nav-item ">
+            <a class="nav-link text-white" href="/cart" style="font-size: 18px;">Cart 
+              <span class="badge badge-info">{{request.session.cart.keys|length}}</span>
+              <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link text-white" href="/orders" style="font-size: 18px;">Orders<span class="sr-only">(current)</span></a>
+          </li>
+ 
+
+        {% endif %}
+
+
+
+        {% if request.session.farmer %}
+        
+          <li class="nav-item ">
+            <a class="nav-link text-white" href="/addProducts" style="font-size: 18px;">AddProducts<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link text-white" href="/farmorder" style="font-size: 18px;">FarmOrders<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link text-white" href="/crs" style="font-size: 18px;">CropRecommendation<span class="sr-only">(current)</span></a>
+          </li>
+  
+          <li class="nav-item ">
+            <a class="nav-link text-white" href="/pdd" style="font-size: 18px;">PlantDisease<span class="sr-only">(current)</span></a>
+          </li>
+  
+          <li class="nav-item ">
+            <a class="nav-link text-white" href="/remedies" style="font-size: 18px;">PlantRemedies<span class="sr-only">(current)</span></a>
+          </li>
+
+          <li class="nav-item ">
+            <a class="nav-link text-white" href="/weatherdatas" style="font-size: 18px;">Weather<span class="sr-only">(current)</span></a>
+          </li>
+        
+  
+
+        {% endif %}
+        
+        {% if request.session.customer or request.session.farmer %}
+        
+        <li class="nav-item ">
+          <a class="nav-link text-white" href="/logout" style="font-size: 18px;">Logout<span class="sr-only">(current)</span></a>
+        </li>
+        {% else %}
+        <li class="nav-item ">
+          <a class="nav-link text-white" href="/login" style="font-size: 18px;">Login<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link text-white" href="/signup" style="font-size: 18px;">Signup<span class="sr-only">(current)</span></a>
+        </li>
+  
+        {% endif %}
+
+    
+
+
+  
+       <!--Google translate select options-->
+
+       <div id="google_translate_element"></div>
+       
+     </ul>
+
+
+   </div>
+ </nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
+    <!--<div id="name"><a href={% url 'cultivo_main:home'%}>Cultivo</a></div>-->
+    <div id="name">Crop Recommendation System</div>
+    
+
+
+<div class="login-wrap">
+    <div class="login-html">
+        <!-- <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Sign Up</label> -->
+        <div class="login-form">
+                <div class='group'>
+                    <p class='label' align='center' style="color: black;"> <span>{{crop}}</span> has not been grown in your region, in the past 10 years. <br> Happy experimenting</p>
+                </div>
+            <div class="hr"  style='margin-top:-1%;'></div>
+            <div id='link_another' align='center' ><a href="{% url 'cultivo_main:home'%}"><u>Would you like to change your mind?</u></a></div>
+                
+        
+
+        
+            </div>
+            </div></div>
+
+
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <!--<iframe width="350" height="430" allow="microphone;" src="https://console.dialogflow.com/api-client/demo/embedded/70d21978-4350-401c-83d7-d1a6688a91e7"></iframe>-->
+        <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+        <df-messenger
+          chat-icon="https:&#x2F;&#x2F;i.ibb.co&#x2F;nCZLxbM&#x2F;Capture.png"
+          intent="WELCOME"
+          chat-title="AGROS-FAQs"
+          agent-id="70d21978-4350-401c-83d7-d1a6688a91e7"
+          language-code="en"
+        ></df-messenger>
+    
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+        <div class="container">
+        <h3>Agro Services and Solutions</h3>
+        <div class="social-links">
+            <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+            <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+            <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+            <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+            <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+        </div>
+        <div class="copyright">
+            &copy; Copyright <strong><span>BISAG</span></strong>. All Rights Reserved
+        </div>
+        <div class="credits">
+            <!-- All the links in the footer should remain intact. -->
+            <!-- You can delete the links only if you purchased the pro version. -->
+            <!-- Licensing information: https://bootstrapmade.com/license/ -->
+            <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/knight-simple-one-page-bootstrap-template/ -->
+            
+        </div>
+        </div>
+        <div id="preloader"></div>
+        <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+      
+    </footer><!-- End Footer -->
+          
+
+
+
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+      }
+      </script>
+      
+      <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    
+    
+    
+ 
+<script type="text/javascript">
+  $('input[name="group"]').on("click", function(){
+  $("#template_1").toggle(this.value === "farmer" && this.checked);
+});
+</script>
+
+
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
+  <script src="{% static 'assets/vendor/purecounter/purecounter.js' %}"></script>
+  <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'assets/js/main.js' %}"></script>
+
+
+
+
+      
+
+
+
+  </body>
+</html>
+

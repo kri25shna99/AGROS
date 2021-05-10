@@ -1,0 +1,130 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<style>
+   /* body{
+		background-color: #dbdbe6;
+	}*/
+	body {
+background: url(https://i.ibb.co/Vxh5fsB/signup.jpg) no-repeat 50% 50%;   background-size:cover;
+
+}
+	.contact{
+		padding: 4%;
+		height: 800px;
+	}
+	.col-md-3{
+		background: #ff9b00;
+		padding: 4%;
+		border-top-left-radius: 0.5rem;
+		border-bottom-left-radius: 0.5rem;
+	}
+	.contact-info{
+		margin-top:10%;
+	}
+	.contact-info img{
+		margin-bottom: 15%;
+	}
+	.contact-info h2{
+		margin-bottom: 10%;
+	}
+	.col-md-9{
+		background: #fff;
+		padding: 3%;
+		border-top-right-radius: 0.5rem;
+		border-bottom-right-radius: 0.5rem;
+	}
+	.contact-form label{
+		font-weight:600;
+	}
+	.contact-form button{
+		background: #25274d;
+		color: #fff;
+		font-weight: 600;
+		width: 25%;
+	}
+	.contact-form button:focus{
+		box-shadow:none;
+	}
+</style>
+
+<form action="form" method="POST" enctype="multipart/form-data">
+	{% csrf_token %}
+	<div class="container contact">
+		<div class="row">
+			<div class="col-md-3">
+				<div class="contact-info">
+					<img src="https://i.ibb.co/wKH80PN/agro2-icon.png" height="100" width="100" alt="image"/>
+					<h2>AGROS</h2>
+					<h4>Get the best price for your products!</h4>
+				</div>
+			</div>
+			<div class="col-md-9">
+				<div class="contact-form">
+					<div class="form-group">
+					<label class="control-label col-sm-2" for="pname">Product:</label>
+					<div class="col-sm-10">          
+						<input type="text" class="form-control" id="pname" placeholder="Enter product name" name="pname">
+					</div>
+					</div>
+					<div class="form-group">
+					<label class="control-label col-sm-2" for="price">Price:</label>
+					<div class="col-sm-10">          
+						<input type="text" class="form-control" id="price" placeholder="Enter product price" name="price">
+					</div>
+					</div>
+					<div class="form-group">
+					<label class="control-label col-sm-2" for="category">Category:</label>
+					<div class="col-sm-10">
+						<!--<input type="email" class="form-control" id="category" placeholder="Enter product category" name="category">-->
+						<select class="custom-select" id="category" name="category">
+							<option selected>Choose category</option>
+							<option value="Cereals">Cereals</option>
+							<option value="Pulses">Pulses</option>
+							<option value="Vegetables">Vegetables</option>
+							<option value="Fruits">Fruits</option>
+							<option value="Nuts">Nuts</option>
+							<option value="Oil Seeds">Oil Seeds</option>
+							<option value="Sugars and Starches">Sugars and Starches</option>
+							<option value="Fibres">Fibres</option>
+							<option value="Beverages">Beverages</option>
+							<option value="Spices">Spices</option>
+							<option value="Condiments">Condiments</option>
+							<option value="Rubber Forages">Rubber Forages</option>
+							<option value="Green Leaf Manure">Green Leaf Manure</option>
+							
+							
+							<!--{% for category in categories %}
+								<option value="{{ category.name }}">{{ category.name }}</option>
+							{% endfor %}-->
+						</select>
+					</div>
+					</div>
+					<div class="form-group">
+					<label class="control-label col-sm-2" for="description">Description:</label>
+					<div class="col-sm-10">
+						<textarea class="form-control" rows="5" id="description"  name="description">A very good quality product offered through AGROS which is very much healthy and helpful in day-to-day life.</textarea>
+					</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-2" for="image">Image:</label>
+						<div class="custom-file col-sm-10">
+							<!--<input type="file" class="custom-file-input form-control" id="customFile" name="image">
+							<label class="custom-file-label control-label" for="customFile">Choose file</label>-->
+							<input type="file" class="form-control" id="image" name="image">
+						</div>
+					</div>
+					<div class="form-group">        
+					<div class="col-sm-offset-2 col-sm-10">
+						<button type="submit" class="btn btn-default">Submit</button>
+					</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</form>
+
+
+{% endblock %}
